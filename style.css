@@ -28,18 +28,6 @@ body {
   padding: 0.2vw;
   width: 10vw;
 }
-/* Menu Section */
-.menu {
-  align-content: center;
-  position: relative;
-  height: 2.7vw;
-  background: linear-gradient(
-    90deg,
-    #141e30,
-    #243b55
-  ); /* Sleek dark gradient */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
-}
 
 /* Menu List Styling */
 /* Menu Section */
@@ -49,9 +37,11 @@ body {
   height: 3vw;
   background: linear-gradient(
     90deg,
-    #1b1b1b,
-    #2e2e2e
-  ); /* Darker gradient for depth */
+    #0a3d62,
+    /* Dark navy blue */ #1e6091,
+    /* Deep cerulean blue */ #64bcf3,
+    /* Light sky blue */ #66b1eb /* Very light blue, almost white */
+  );
   border-bottom: 1px solid #75bfee; /* Orange accent that matches your theme */
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.8); /* Strong shadow for a bold look */
 }
@@ -217,13 +207,8 @@ body {
   font-size: 3.2rem; /* Smaller, balanced heading size */
   font-weight: 700;
   font-family: "lineage2";
-  background: linear-gradient(
-    90deg,
-    #0a3d62,
-    /* Dark navy blue */ #1e6091,
-    /* Deep cerulean blue */ #82cfff,
-    /* Light sky blue */ #eaf6ff /* Very light blue, almost white */
-  );
+  background: #82cfff;
+
   background-size: 200%;
   background-clip: text;
   -webkit-background-clip: text;
@@ -237,12 +222,12 @@ body {
 
 .paragraph-text {
   font-size: 1.3rem; /* Slightly larger, but balanced */
-  background: linear-gradient(90deg, #c0c0c0, #a9a9a9, #808080, #696969);
+  background: linear-gradient(90deg, #ffffff, #222222, #ffffff, #ffffff);
   background-size: 200%;
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent; /* Make the text itself transparent to reveal the gradient */
-  animation: shineGradient1 5s linear infinite; /* Same gradient animation */
+  animation: shineGradient1 10s linear infinite; /* Same gradient animation */
   margin: 10px 0;
   line-height: 1.6; /* Comfortable spacing */
 }
@@ -407,36 +392,24 @@ body {
 
 /* Grand Opening Section */
 #grand-opening {
-  background: linear-gradient(
-    90deg,
-    #0a3d62,
-    /* Dark navy blue */ #1e6091,
-    /* Deep cerulean blue */ #82cfff,
-    /* Light sky blue */ #eaf6ff /* Very light blue, almost white */
-  );
-
-  /* Gradient background */
+  background: linear-gradient(90deg, #0a3d62, #1e6091, #64bcf3, #66b1eb);
   padding: 0;
   text-align: center;
   color: #fff;
   position: relative;
 }
-/* Remove any default padding/margin from sections */
+
 section {
   margin: 0;
   padding: 0;
 }
 
-/* Remove potential margin on the grand opening section */
-
-/* Ensure there's no padding/margin on the content */
 .main-content,
 #grand-opening-div {
   margin: 0;
   padding: 0;
 }
 
-/* Add margin collapse protection */
 h1,
 p {
   margin: 0;
@@ -456,13 +429,13 @@ html {
 .grand-openingText {
   font-size: 3rem;
   font-family: "lineage2", sans-serif;
-  background: linear-gradient(40deg, #000, #000, #f3f2f2, #000000);
+  background: linear-gradient(40deg, #000, #000, #ffffff, #000000);
 
   background-size: 200%;
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  animation: shineGradient 5s linear infinite;
+  animation: shineGradient 6s linear infinite;
   text-transform: uppercase;
   letter-spacing: 2px;
   position: relative;
