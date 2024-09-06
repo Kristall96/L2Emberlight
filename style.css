@@ -7,11 +7,10 @@ body {
 /* Font for Lineage 2 */
 @font-face {
   font-family: "lineage2";
-  src: url("/L2Interlude/Lineage_2_Font/49_la2font.ttf") format("truetype");
+  src: url("Lineage_2_Font/49_la2font.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
-
 #socialIconsSection {
   display: flex;
   justify-content: center;
