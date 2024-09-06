@@ -1,0 +1,698 @@
+/* Global Styles */
+body {
+  padding: 0;
+  margin: 0;
+}
+
+/* Font for Lineage 2 */
+@font-face {
+  font-family: "lineage2";
+  src: url("/Lineage_2_Font/49_la2font.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+#socialIconsSection {
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(
+    90deg,
+    #141e30,
+    #243b55
+  ); /* Sleek dark gradient */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+}
+#socialIcons {
+  display: flex;
+  justify-content: center;
+  padding: 0.2vw;
+  width: 10vw;
+}
+/* Menu Section */
+.menu {
+  align-content: center;
+  position: relative;
+  height: 2.7vw;
+  background: linear-gradient(
+    90deg,
+    #141e30,
+    #243b55
+  ); /* Sleek dark gradient */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+}
+
+/* Menu List Styling */
+/* Menu Section */
+.menu {
+  align-content: center;
+  position: relative;
+  height: 3vw;
+  background: linear-gradient(
+    90deg,
+    #1b1b1b,
+    #2e2e2e
+  ); /* Darker gradient for depth */
+  border-bottom: 2px solid #ff4500; /* Orange accent that matches your theme */
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.8); /* Strong shadow for a bold look */
+}
+
+/* Menu List Styling */
+.menu-list {
+  display: flex;
+  list-style-type: none;
+  gap: 3vw;
+  justify-content: center;
+  align-items: center;
+  width: 85%;
+  padding-left: 10vw;
+  margin: 0;
+}
+
+.menu-item {
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #dcdcdc; /* Soft light gray text */
+  padding: 0.5vw 1.5vw;
+  position: relative;
+  transition: color 0.4s ease, transform 0.3s ease, text-shadow 0.4s ease;
+}
+
+.menu-item::before {
+  content: "";
+  position: absolute;
+  bottom: -6px; /* Positioned right below the text */
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background-color: #ffae00; /* Bright orange accent */
+  transition: width 0.4s ease, left 0.4s ease;
+}
+
+.menu-item:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+.menu-item:hover {
+  color: #fff; /* Bright white on hover */
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.6); /* Subtle glowing text */
+  transform: translateY(-4px); /* Lift the item slightly on hover */
+}
+
+/* Social Media Icons */
+.menu-icons-list {
+  display: flex;
+  width: 15%;
+  gap: 1vw;
+  padding-right: 2vw;
+  margin: 0;
+  justify-content: center;
+}
+
+.menu-icons-item {
+  list-style-type: none;
+  cursor: pointer;
+}
+
+.menu-icons-item i {
+  font-size: 1vw;
+  color: #bfbfbf; /* Soft metallic look */
+  transition: color 0.4s ease, transform 0.3s ease, text-shadow 0.4s ease;
+}
+
+/* Icon Hover Effects */
+.menu-icons-item i:hover {
+  color: #ff4500; /* Bright orange that matches the site’s color scheme */
+  transform: scale(1.3); /* Grow the icon on hover */
+  text-shadow: 0 0 12px rgba(255, 69, 0, 0.7); /* Bright glow to match the theme */
+}
+
+/* Main Content Section */
+
+.main-content {
+  width: 100%;
+  height: 100%; /* Ensure it takes up the full height */
+  overflow: hidden;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ensure border is included in dimensions */
+}
+
+.main-content-div {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#video {
+  width: 100%; /* Full width from left to right */
+  max-height: 80vh; /* Adjust the height to 80% of the viewport */
+  object-fit: cover; /* Ensure the video covers the area and maintains its aspect ratio */
+  margin: 0;
+  padding: 0;
+  display: block;
+  /* box-sizing: border-box; Ensure the border is part of the dimensions */
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  z-index: 1;
+  text-align: center;
+}
+
+/* Vertical Divider Styling */
+.vertical-divider {
+  margin: 0 7vw;
+  width: 2px; /* Width of the divider */
+  height: 0; /* Initial height 0 */
+  background: linear-gradient(180deg, #0d0d0d, #ffae00, #ff4b1f, #2c003e);
+  background-size: 100% 200%; /* Ensure the gradient spans over double the height */
+  background-position: 50% 0%; /* Start gradient at the top */
+  transition: height 5s ease; /* Animate height */
+}
+
+/* When the 'animate' class is added, grow the height */
+.vertical-divider.animate {
+  height: 30vw; /* Height grows */
+  animation: gradientScroll 5s linear infinite; /* Apply gradient scrolling animation */
+}
+
+/* Keyframes to scroll the gradient */
+@keyframes gradientScroll {
+  100% {
+    background-position: 50% 0%; /* Start at the top */
+  }
+  0% {
+    background-position: 50% 200%; /* Scroll the gradient down */
+  }
+}
+.rightSideText {
+  width: 50%;
+  padding: 15% 10% 0 0;
+  justify-content: center;
+}
+.leftSideText {
+  width: 50%;
+  justify-content: center;
+  padding: 15% 0 0 10%;
+}
+/* Heading and Paragraph Styles */
+.heading-gradient {
+  font-size: 2.2rem; /* Smaller, balanced heading size */
+  font-weight: 700;
+  background: linear-gradient(90deg, #002d72, #5d00b0, #ffc800, #ff4500);
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: shineGradient 5s linear infinite;
+  margin: -4vw 0 0 0;
+  padding: 2vw 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.paragraph-text {
+  font-size: 1.3rem; /* Slightly larger, but balanced */
+  background: linear-gradient(90deg, #c0c0c0, #a9a9a9, #808080, #696969);
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent; /* Make the text itself transparent to reveal the gradient */
+  animation: shineGradient1 5s linear infinite; /* Same gradient animation */
+  margin: 10px 0;
+  line-height: 1.6; /* Comfortable spacing */
+}
+
+/* Keyframes for Gray Gradient Shine Animation */
+@keyframes shineGradient1 {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+@keyframes shineGradient {
+  0% {
+    background-position: 20% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Add animation for the text falling and fading in */
+/* Container for the text animation */
+.leftSideText,
+.rightSideText {
+  width: 50%;
+  opacity: 0; /* Start fully hidden */
+  transform: translateY(-30%); /* Start slightly above */
+  animation: textScrape 3s ease forwards; /* Scraping down effect */
+  animation-delay: 3s; /* Delay before the animation starts */
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 20%,
+    black 80%,
+    transparent 100%
+  );
+  mask-size: 100% 200%; /* Make the mask larger than the text */
+  mask-position: 50% 100%; /* Start mask off */
+}
+
+/* Keyframes for the text animation */
+@keyframes textScrape {
+  0% {
+    opacity: 0;
+    transform: translateY(-30%); /* Start above the screen */
+    mask-position: 50% 100%; /* Mask starts out */
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Final position */
+    mask-position: 50% 0%; /* Mask fully reveals the text */
+  }
+}
+.button-container {
+  position: absolute;
+  top: 50%;
+  left: 44%;
+  transform: translate(
+    -50%,
+    1vw
+  ); /* Center the button and position it 1vw below the divider */
+  z-index: 2;
+  opacity: 0; /* Initially hidden */
+  animation: fadeInButton 1.5s ease forwards; /* Animation for button reveal */
+  animation-delay: 5.5s; /* Delay to ensure button shows after 5.5 seconds */
+}
+
+/* Keyframes for the button's fade-in effect */
+@keyframes fadeInButton {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Slight lift to make it rise up */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Normal position */
+  }
+}
+
+/* The button remains the same */
+.gaming-button {
+  font-family: "lineage2", sans-serif; /* Custom font for consistency */
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 10px 58px;
+  color: #fff;
+  background: linear-gradient(90deg, #ff4500, #ffae00, #ffc800);
+  border: 2px solid #ffc800;
+  border-radius: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  box-shadow: 0px 0px 15px rgba(255, 174, 0, 0.7),
+    0px 0px 30px rgba(255, 69, 0, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  margin-top: 12vw;
+}
+
+.gaming-button:hover {
+  background: linear-gradient(90deg, #ffc800, #ffae00, #ff4500);
+  color: #000;
+  border: 2px solid #ff4500;
+  box-shadow: 0px 0px 25px rgba(255, 69, 0, 0.9),
+    0px 0px 40px rgba(255, 174, 0, 0.8);
+  transform: translateY(-3px); /* Small lift effect */
+}
+
+.gaming-button::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 200%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.5s ease-in-out;
+  transform: rotate(45deg);
+  z-index: -1;
+}
+
+.gaming-button:hover::before {
+  top: -150px;
+  left: -150px;
+  transform: rotate(90deg);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Grand Opening Section */
+#grand-opening {
+  background: linear-gradient(
+    90deg,
+    #002d72,
+    #5d00b0,
+    #ffc800,
+    #ff4500
+  ); /* Gradient background */
+  padding: 0;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+/* Remove any default padding/margin from sections */
+section {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove potential margin on the grand opening section */
+
+/* Ensure there's no padding/margin on the content */
+.main-content,
+#grand-opening-div {
+  margin: 0;
+  padding: 0;
+}
+
+/* Add margin collapse protection */
+h1,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  padding: 0;
+  margin: 0;
+}
+
+#grand-opening-div {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.grand-openingText {
+  font-size: 3rem;
+  font-family: "lineage2", sans-serif;
+  background: linear-gradient(40deg, #000, #000, #f3f2f2, #000000);
+
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: shineGradient 5s linear infinite;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+#countdown {
+  display: flex;
+  justify-content: center;
+  gap: 3vw;
+}
+
+.time-box {
+  text-align: center;
+  padding: 0.3vw 0.5vw;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+}
+
+.time {
+  font-size: 2.5rem;
+  font-family: "lineage2", sans-serif;
+  display: block;
+  color: #ffc800;
+}
+
+.label {
+  font-size: 1.2rem;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+/* Keyframes for Gradient Shine */
+@keyframes shineGradient {
+  0% {
+    background-position: 20% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+/* Sidebar Common Styles */
+.side-bar {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 300px;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: transform 0.3s ease;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 60px; /* Adjust so content starts below the button */
+}
+
+/* Left Sidebar */
+#sideBarLeft {
+  left: 0;
+  transform: translateX(-100%);
+}
+
+#sideBarLeft.open {
+  transform: translateX(0);
+}
+
+/* Right Sidebar */
+#sideBarRight {
+  right: 0;
+  transform: translateX(100%);
+}
+
+#sideBarRight.open {
+  transform: translateX(0);
+}
+
+/* Button Styles */
+.open-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(0);
+  background-color: #ff4500;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 1001;
+  font-size: 1rem;
+}
+
+/* Attach Button to the Edge of the Sidebar */
+.left-btn {
+  right: -99px;
+}
+
+.right-btn {
+  left: -109px;
+}
+
+/* Video Gallery Styling */
+.video-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  overflow: auto;
+}
+
+.video-gallery video {
+  width: 100%;
+  height: auto;
+  background-color: #000;
+}
+
+/* Image Gallery Styling */
+.image-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  overflow: auto;
+  cursor: pointer;
+}
+
+.image-gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Lightbox (modal) styling */
+.lightbox {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1002;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding-top: 50px; /* Add space at the top */
+}
+
+.lightbox-content {
+  display: block;
+  margin: 4vw auto auto auto;
+  max-width: 80%;
+  max-height: 70%; /* Reduce height to make space for thumbnails */
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.lightbox-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none; /* Allow only buttons to be clickable */
+}
+
+.lightbox-controls button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  padding: 10px;
+  font-size: 30px;
+  cursor: pointer;
+  pointer-events: auto; /* Enable clicking for buttons */
+  transform: translateY(-50%); /* Center vertically */
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+#prevBtn {
+  position: relative;
+  left: 10vw; /* Adjust this value to move it closer to the image */
+}
+
+#nextBtn {
+  position: relative;
+  right: 10vw; /* Adjust this value to move it closer to the image */
+}
+
+.lightbox-controls button:hover {
+  background-color: rgba(241, 241, 241, 0.1); /* Lighter background on hover */
+}
+
+/* Thumbnail Gallery Navigation Buttons */
+.thumbnail-gallery-container {
+  position: relative;
+  width: 90%; /* Full width of the screen */
+  padding-left: 5vw;
+  padding-right: 5vw;
+  margin-top: 0.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.thumbnail-gallery {
+  display: flex;
+  flex-wrap: nowrap; /* Prevent wrapping */
+  gap: 10px;
+  padding: 1vw;
+  overflow-x: auto; /* Enables horizontal scrolling */
+  white-space: nowrap;
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
+}
+
+.thumbnail-gallery::-webkit-scrollbar {
+  display: none; /* Hide scrollbar in Chrome/Safari */
+}
+
+.thumbnail-gallery img {
+  width: 100px;
+  height: auto;
+  cursor: pointer;
+  border: 2px solid white;
+  transition: transform 0.3s ease;
+  box-sizing: border-box;
+}
+
+.thumbnail-gallery img:hover {
+  transform: scale(1.2); /* Zoom effect on hover */
+}
+
+/* Navigation Buttons for Thumbnails */
+.thumb-nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.thumb-nav-button.left {
+  left: 40px; /* Position closer to the thumbnail gallery */
+}
+
+.thumb-nav-button.right {
+  right: 40px; /* Position closer to the thumbnail gallery */
+}
+.thumb-nav-button:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Lighter background on hover */
+}
+
+.imgGalleryText,
+.videoEventText {
+  color: white;
+  text-align: center;
+}
