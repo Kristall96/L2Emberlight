@@ -397,6 +397,7 @@ body {
   text-align: center;
   color: #fff;
   position: relative;
+  padding: 0.3vw;
 }
 
 section {
@@ -458,7 +459,7 @@ html {
 }
 
 .time {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   font-family: "lineage2", sans-serif;
   display: block;
   color: #ffc800;
@@ -528,6 +529,375 @@ html {
   z-index: 1001;
   font-size: 1rem;
 }
+/* Features Section Styling */
+#features-section {
+  display: flex;
+  flex-direction: column; /* Stack title and content vertically */
+  background: linear-gradient(90deg, #141e30, #243b55);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+  max-width: 100%; /* Set max width to prevent it from stretching too far */
+}
+
+#features-section h2 {
+  font-size: 2.5rem;
+  padding-bottom: 0.8vw;
+  padding-top: 0.8vw;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  font-family: "lineage2", sans-serif;
+  background: linear-gradient(180deg, #ffffff, #82cfff);
+  background-clip: text;
+  color: transparent;
+  margin: 0;
+  text-align: center;
+}
+
+.feature-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px; /* Ensure the section doesn't stretch too wide */
+  padding: 0 1vw; /* Equal padding on both sides */
+  gap: 2vw; /* Add gap between the columns */
+}
+
+#features-content {
+  display: flex;
+  justify-content: space-between; /* Distribute equal space between the boxes */
+  align-items: center; /* Align the items vertically (optional) */
+  padding: 0.8vw 0; /* Add some padding to the container */
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2),
+    /* soft shadow */ 0 12px 20px rgba(0, 0, 0, 0.2); /* deeper shadow */
+  border-radius: 1vw;
+}
+.feature-img-right {
+  width: 100%; /* Adjust the width as needed */
+  color: black;
+  padding: 0px 0 0px 0px;
+  text-align: center;
+}
+.feature-img-left {
+  width: 100%; /* Adjust the width as needed */
+  color: black;
+  padding: 0px 3vw 0px 4vw;
+  text-align: center;
+}
+#feature-left-div,
+#features-right-div {
+  width: 23.5vw;
+  text-align: center; /* Center the text under each column */
+  padding: 0vw 0;
+}
+.feature-text {
+  display: flex;
+  flex-direction: column; /* Aligns the <p> tags one under the other */
+  justify-content: center; /* Vertically centers the content */
+  align-items: center; /* Horizontally centers the content */
+}
+.feature-text p {
+  margin: 0; /* Remove any default margins on the <p> tag */
+  text-align: center; /* Ensures the text inside <p> is also centered */
+}
+#feature-left-div h4,
+#features-right-div h4 {
+  font-size: 2rem;
+  color: #ffffff;
+  font-family: "lineage2", sans-serif;
+  background: linear-gradient(180deg, #ffffff, #82cfff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: shineGradient 6s linear infinite;
+  margin-bottom: 1vw;
+  margin: 0;
+}
+
+.align-star {
+  font-size: 1.3rem;
+  vertical-align: middle;
+  display: inline-block;
+  transform: translateY(2px); /* Adjust the Y-axis for fine-tuning */
+}
+.elf {
+  width: 15vw;
+}
+.delf {
+  width: 20vw;
+}
+#feature-left-div p,
+#features-right-div p {
+  font-size: 1.3rem;
+  color: #dcdcdc;
+  margin: 0.5vw auto;
+  line-height: 1.5;
+  text-align: start;
+  transition: color 0.3s ease, transform 0.3s ease;
+  max-width: 90%; /* Keep the text from stretching too wide */
+}
+
+/* Hover effects for each feature */
+#feature-left-div p:hover,
+#features-right-div p:hover {
+  color: #ffffff;
+  transform: translateY(-3px); /* Subtle lift effect on hover */
+}
+
+@media (max-width: 768px) {
+  /* Mobile responsiveness */
+  #features-content {
+    flex-direction: column; /* Stack the columns on top of each other */
+    align-items: center; /* Center the content on mobile */
+  }
+
+  #feature-left-div,
+  #features-right-div {
+    width: 100%; /* Make them full width */
+    margin-bottom: 2vw;
+  }
+
+  .feature-img-left,
+  .feature-img-right {
+    display: none; /* Hide images on smaller screens */
+  }
+
+  #features-section h2 {
+    font-size: 2.5rem;
+  }
+}
+
+/* Event Section Styling */
+#events-section {
+  padding-bottom: 3vw;
+  background: linear-gradient(90deg, #141e30, #243b55);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+  margin: 0;
+  text-align: center;
+}
+
+#events-section h2 {
+  font-size: 2.5rem;
+  padding-bottom: 0.8vw;
+  padding-top: 0.8vw;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  font-family: "lineage2", sans-serif;
+  background: linear-gradient(180deg, #ffffff, #82cfff);
+  background-clip: text;
+  color: transparent;
+  margin: 0;
+  text-align: center;
+}
+
+.events-container {
+  display: flex;
+  justify-content: space-between;
+  justify-content: center;
+  gap: 2vw; /* Add space between the event cards */
+  width: 60vw;
+  margin: 0 auto; /* Center the container */
+  padding: 2vw;
+}
+
+.event-box {
+  background-color: #1f2b36;
+  border-radius: 1vw;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+  padding: 1.5vw;
+  flex: 1;
+  text-align: center;
+}
+
+.event-box img {
+  width: 20vw;
+  height: 60%;
+  border-radius: 1vw;
+  margin-bottom: 1vw;
+}
+
+#event-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  font-family: "lineage2", sans-serif;
+  background: linear-gradient(180deg, #ffffff, #82cfff);
+  background-clip: text;
+  color: transparent;
+  padding-bottom: 1vw;
+  margin-top: -0.5vw;
+}
+
+.event-box p {
+  font-size: 1.2rem;
+  color: #dcdcdc;
+  margin: 0.5vw 0;
+}
+
+/* Video Section Styling */
+#top-videos {
+  padding-bottom: 3vw;
+  background: linear-gradient(90deg, #141e30, #243b55);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+  margin: 0;
+  text-align: center;
+}
+
+#top-videos h2 {
+  font-size: 2.5rem;
+  padding-bottom: 1vw;
+  padding-top: 1vw;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  font-family: "lineage2", sans-serif;
+  background: linear-gradient(180deg, #ffffff, #82cfff);
+  background-clip: text;
+  color: transparent;
+  margin: 0 0 2vw 0;
+  text-align: center;
+}
+
+.video-container {
+  display: flex;
+  justify-content: center; /* Centers divs horizontally */
+  align-items: center; /* Centers divs vertically */
+  gap: 2vw; /* Space between videos */
+  max-width: 80vw;
+  margin: 0.5vw auto; /* Centers the entire parent div itself */
+  padding: 0.5vw;
+}
+.video-container2 {
+  display: flex;
+  justify-content: center; /* Centers divs horizontally */
+  align-items: center; /* Centers divs vertically */
+  gap: 2vw; /* Space between videos */
+  max-width: 80vw;
+  margin: 0.5vw auto; /* Centers the entire parent div itself */
+  padding: 0.5vw;
+}
+
+.video-box {
+  flex: 1;
+  justify-content: center;
+  background-color: #1f2b36;
+  padding: 0.5vw;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+  border-radius: 0.3vw;
+}
+
+.video-box video {
+  width: 100%;
+  height: auto;
+  border-radius: 0.3vw;
+  object-fit: cover; /* This ensures the poster image fills the box while maintaining aspect ratio */
+}
+
+@media (max-width: 768px) {
+  .video-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .video-box {
+    width: 100%;
+    margin-bottom: 2vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .events-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .event-box {
+    width: 100%;
+    margin-bottom: 2vw;
+  }
+}
+
+/* Image Gallery Section Styling */
+#image-event {
+  padding-bottom: 3vw;
+  background: linear-gradient(90deg, #141e30, #243b55);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+  margin: 0;
+  text-align: center;
+}
+
+#image-event h2 {
+  font-size: 2.5rem;
+  padding-bottom: 0.8vw;
+  padding-top: 0.8vw;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  font-family: "lineage2", sans-serif;
+  background: linear-gradient(180deg, #ffffff, #82cfff);
+  background-clip: text;
+  color: transparent;
+  margin: 0;
+  text-align: center;
+}
+
+#images-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2vw;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 1vw;
+  margin-top: 2.5vw;
+}
+
+.image-box {
+  flex: 1;
+  min-width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 1vw;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+  cursor: pointer;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.gallery-img:hover {
+  transform: scale(1.1); /* Zoom in slightly on hover */
+}
+
+/* Modal styling */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+  display: block;
+  margin: auto;
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.close {
+  position: absolute;
+  top: 30px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
 
 /* Attach Button to the Edge of the Sidebar */
 .left-btn {
@@ -536,6 +906,7 @@ html {
 
 .right-btn {
   left: -109px;
+  rotate: 180deg;
 }
 
 /* Video Gallery Styling */
@@ -554,6 +925,7 @@ html {
 }
 
 /* Image Gallery Styling */
+
 .image-gallery {
   display: flex;
   flex-direction: column;
@@ -703,4 +1075,98 @@ html {
 .videoEventText {
   color: white;
   text-align: center;
+}
+
+/* Footer Styling */
+.footer {
+  background: #141e30;
+  color: #dcdcdc;
+  padding: 1.5vw 0 0 0;
+  font-size: 0.9rem;
+  box-shadow: 0px -4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2vw;
+}
+
+.footer-logo h3 {
+  font-size: 2rem;
+  padding-bottom: 0.8vw;
+  padding-top: 0.8vw;
+  color: #ffffff;
+  font-family: "lineage2", sans-serif;
+  background: linear-gradient(180deg, #ffffff, #82cfff);
+  background-clip: text;
+  color: transparent;
+  margin: 0;
+  text-align: center;
+}
+
+.footer-links ul {
+  list-style: none;
+  display: flex;
+  gap: 2vw;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-links ul li a {
+  color: #dcdcdc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+  color: #ffffff;
+}
+
+.footer-social a {
+  margin-left: 1vw;
+  color: #dcdcdc;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #ff4500;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 1vw;
+  padding: 0.8vw 0;
+  background: #243b55;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #ffffff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-logo {
+    margin-bottom: 1vw;
+  }
+
+  .footer-links ul {
+    flex-direction: column;
+    gap: 1vw;
+  }
+
+  .footer-social {
+    margin-top: 1vw;
+  }
 }

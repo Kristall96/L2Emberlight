@@ -53,17 +53,17 @@ const openRightBtn = document.getElementById("openRight");
 // Open/Close the Left Sidebar
 openLeftBtn.addEventListener("click", () => {
   sideBarLeft.classList.toggle("open");
-  openLeftBtn.textContent = sideBarLeft.classList.contains("open")
-    ? "Close Left"
-    : "Open Left";
+  openLeftBtn.innerHTML = sideBarLeft.classList.contains("open")
+    ? '<i class="fa-solid fa-times"></i>' // Icon for "Close Left"
+    : '<i class="fa-solid fa-play"></i>'; // Icon for "Open Left"
 });
 
 // Open/Close the Right Sidebar
 openRightBtn.addEventListener("click", () => {
   sideBarRight.classList.toggle("open");
-  openRightBtn.textContent = sideBarRight.classList.contains("open")
-    ? "Close Right"
-    : "Open Right";
+  openRightBtn.innerHTML = sideBarRight.classList.contains("open")
+    ? '<i class="fa-solid fa-times"></i>' // Icon for "Close Right"
+    : '<i class="fa-solid fa-play"></i>'; // Icon for "Open Right"
 });
 
 // Get elements
@@ -270,3 +270,35 @@ document.addEventListener("keydown", (e) => {
     stopAutoPlay(); // Stop autoplay when closed
   }
 });
+
+// Get the modal
+var modal = document.getElementById("imageModal");
+
+// Get the modal image element
+var modalImg = document.getElementById("imgModal");
+
+// Get all images in the gallery
+var images = document.getElementsByClassName("gallery-img");
+
+// Get the close button
+var closeBtns = document.getElementsByClassName("close")[0];
+
+// Loop through all images and add click event
+for (var i = 0; i < images.length; i++) {
+  images[i].onclick = function () {
+    modal.style.display = "block";
+    modalImg.src = this.src;
+  };
+}
+
+// Close the modal when clicking on the "x" button
+closeBtns.onclick = function () {
+  modal.style.display = "none";
+};
+
+// Close the modal when clicking outside of the image
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};
