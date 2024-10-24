@@ -1170,3 +1170,284 @@ html {
     margin-top: 1vw;
   }
 }
+/* Mobile styles for screens smaller than 768px */
+@media (max-width: 768px) {
+  /* General adjustments for mobile */
+  body {
+    padding: 0;
+    margin: 0;
+    font-size: 16px; /* Ensure readable base font size */
+    line-height: 1.5; /* Comfortable line height */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+
+  /* Section adjustments */
+  section {
+    padding: 2vw 5vw; /* Consistent padding for mobile sections */
+  }
+
+  /* Social Icons Section */
+  #socialIconsSection {
+    padding: 2vw 0; /* Add vertical padding */
+  }
+
+  #socialIcons {
+    width: 100%; /* Full width on mobile */
+    display: flex;
+    justify-content: space-around; /* Spread icons evenly */
+  }
+
+  .menu-icons-list {
+    width: 100%; /* Full width */
+    justify-content: space-around; /* Spread icons */
+    gap: 0; /* No gap between icons */
+  }
+
+  .menu-icons-item i {
+    font-size: 1.5rem; /* Increase icon size slightly for touch */
+  }
+
+  /* Menu Section */
+  .menu {
+    height: auto; /* Allow flexible height */
+    padding: 2vw 0; /* Add padding for better spacing */
+  }
+
+  .menu-list {
+    flex-direction: row; /* Stack menu items vertically */
+    justify-content: space-around; /* Spread items */
+    gap: 3vw; /* Add more spacing between menu items */
+    padding-left: 0; /* Remove left padding */
+    align-items: center; /* Center items */
+  }
+
+  .menu-item {
+    font-size: 0.7rem; /* Increase size for readability */
+    padding: 1vw; /* Increase padding for touch-friendliness */
+    text-align: center; /* Center text */
+  }
+
+  /* Main Content Section */
+  .main-content-div {
+    padding: 0;
+    margin: 0;
+  }
+
+  #video {
+    width: 100%; /* Full width */
+    max-height: 50vh; /* Adjust height for mobile */
+    object-fit: cover; /* Maintain video aspect ratio */
+  }
+
+  .video-overlay {
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center;
+    padding: 5vw; /* Add padding for better spacing */
+  }
+
+  .leftSideText,
+  .rightSideText {
+    width: 100%; /* Full width on mobile */
+    padding: 5vw 0; /* Adjust padding */
+  }
+
+  .heading-gradient {
+    font-size: 2rem; /* Smaller heading size */
+    margin: 1vw 0; /* Reduce margin */
+  }
+
+  .paragraph-text {
+    font-size: 1rem; /* Adjust font size for mobile */
+    margin: 1.5vw 0; /* Add some margin */
+  }
+
+  .vertical-divider {
+    display: none; /* Remove divider on mobile */
+  }
+
+  .button-container {
+    top: auto; /* Remove fixed position */
+    margin-top: 4vw; /* Add margin for spacing */
+  }
+
+  .gaming-button {
+    font-size: 1.2rem; /* Adjust button size */
+    padding: 10px 40px; /* Adjust padding for touch */
+    margin-top: 5vw; /* Add margin for spacing */
+  }
+
+  /* Grand Opening Section */
+  #grand-opening-div {
+    padding: 5vw 0; /* Add padding for spacing */
+  }
+
+  .grand-openingText {
+    font-size: 1.2rem; /* Adjust heading size */
+  }
+
+  #countdown {
+    flex-direction: row; /* Stack time boxes vertically */
+    gap: 2vw; /* Add space between time boxes */
+  }
+
+  .time-box {
+    display: none;
+  }
+
+  /* Features Section */
+  #features-section {
+    padding: 5vw 0; /* Add padding for spacing */
+  }
+
+  .feature-container {
+    flex-direction: column; /* Stack feature content vertically */
+    gap: 4vw; /* Add more space between items */
+  }
+
+  .feature-box {
+    width: 100%; /* Full width on mobile */
+    margin-bottom: 2vw; /* Add margin */
+  }
+  #feature-left-div h4 {
+    font-size: 1rem;
+  }
+  #features-right-div h4 {
+    font-size: 1rem;
+  }
+
+  .feature-img-left,
+  .feature-img-right {
+    display: none; /* Hide images on mobile */
+  }
+
+  #features-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Centers children horizontally */
+    align-items: center; /* Centers children vertically */
+  }
+
+  #feature-left-div,
+  #features-right-div {
+    width: 43vw; /* Full width on mobile */
+  }
+
+  .feature-text .align-star {
+    font-size: 0.8rem; /* Adjust font size for readability */
+  }
+  #forP p {
+    font-size: 1rem; /* Adjust font size for readability */
+  }
+
+  /* Event Calendar Section */
+  #events-section {
+    padding: 5vw 0; /* Add padding for spacing */
+  }
+
+  .events-container {
+    flex-direction: row; /* Stack events vertically */
+    gap: 3vw; /* Increase spacing between events */
+    width: 90%; /* Adjust width */
+  }
+
+  .event-box {
+    width: 100%; /* Full width */
+    margin-bottom: 5vw; /* Add spacing between event boxes */
+  }
+
+  .event-box img {
+    width: 25vw;
+    height: 15vw;
+    border-radius: 1vw;
+    margin-bottom: 1vw;
+  }
+
+  #eventP p {
+    font-size: 0.5rem;
+  }
+  #eventP #event-title {
+    font-size: 0.76rem;
+  }
+  /* Best Videos Section */
+  .video-container,
+  .video-container2 {
+    flex-direction: column; /* Stack videos vertically */
+    gap: 3vw; /* Add more space between videos */
+  }
+
+  .video-box {
+    width: 100%; /* Full width */
+    margin-bottom: 4vw; /* Add margin for spacing */
+  }
+
+  /* Image Gallery Section */
+  #images-container {
+    flex-direction: column; /* Stack images vertically */
+    gap: 3vw; /* Increase gap between images */
+    padding: 2vw 0; /* Add padding for spacing */
+  }
+
+  .image-box {
+    width: 100%; /* Full width on mobile */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 4vw; /* Add margin */
+  }
+
+  .gallery-img {
+    height: auto; /* Ensure images maintain aspect ratio */
+  }
+
+  /* Sidebar adjustments for mobile */
+  #sideBarLeft,
+  #sideBarRight {
+    width: 100%; /* Full width on mobile */
+    padding: 10vw 0; /* Adjust padding */
+  }
+
+  .open-btn {
+    font-size: 1.5rem; /* Adjust button size for mobile */
+    padding: 10px 20px; /* Add padding for better touch area */
+  }
+
+  /* Footer Section */
+  .footer-container {
+    flex-direction: column; /* Stack footer elements vertically */
+    text-align: center; /* Center align text */
+    gap: 3vw; /* Add space between footer sections */
+  }
+
+  .footer-logo {
+    font-size: 1.8rem; /* Adjust logo size */
+    margin-bottom: 4vw; /* Add margin for spacing */
+  }
+
+  .footer-links ul {
+    flex-direction: column; /* Stack links vertically */
+    gap: 2vw; /* Add space between links */
+  }
+
+  .footer-social {
+    margin-top: 2vw; /* Add margin for spacing */
+  }
+
+  .footer-bottom {
+    font-size: 1rem; /* Adjust font size */
+    padding: 1vw 0; /* Add padding */
+  }
+
+  /* Modal adjustments */
+  .modal-content {
+    max-width: 90%; /* Ensure modal content scales on mobile */
+    max-height: 80%;
+  }
+
+  .thumbnail-gallery img {
+    width: 70px; /* Smaller thumbnails */
+  }
+
+  /* Lightbox controls adjustments */
+  #prevBtn,
+  #nextBtn {
+    font-size: 1.5rem; /* Adjust arrow size */
+  }
+}
