@@ -302,24 +302,44 @@ window.onclick = function (event) {
     modal.style.display = "none";
   }
 };
-// Function to remove the last two videos on mobile devices
-function removeVideosOnMobile() {
-  // Check if the screen width is 768px or less
-  if (window.innerWidth <= 768) {
-    // Select the last two video-box elements
-    const videoBoxes = document.querySelectorAll(".video-box");
-    const lastVideo1 = videoBoxes[videoBoxes.length - 1]; // Last video
-    const lastVideo2 = videoBoxes[videoBoxes.length - 2]; // Second last video
+// Function to handle play/pause for a video
+function handleVideoControls(video, playButton, pauseButton) {
+  // Play the video and toggle buttons
+  playButton.addEventListener("click", function () {
+    video.play();
+    playButton.style.display = "none"; // Hide play button
+    pauseButton.style.display = "flex"; // Show pause button
+  });
 
-    // Remove the last two videos
-    if (lastVideo1) {
-      lastVideo1.parentNode.removeChild(lastVideo1);
-    }
-    if (lastVideo2) {
-      lastVideo2.parentNode.removeChild(lastVideo2);
-    }
-  }
+  // Pause the video and toggle buttons
+  pauseButton.addEventListener("click", function () {
+    video.pause();
+    pauseButton.style.display = "none"; // Hide pause button
+    playButton.style.display = "flex"; // Show play button
+  });
+
+  // Show play button when the video is paused by clicking the video controls
+  video.addEventListener("pause", function () {
+    pauseButton.style.display = "none"; // Hide pause button
+    playButton.style.display = "flex"; // Show play button
+  });
+
+  // Show pause button when the video is playing
+  video.addEventListener("play", function () {
+    playButton.style.display = "none"; // Hide play button
+    pauseButton.style.display = "flex"; // Show pause button
+  });
 }
 
-// Run the function when the page is loaded
-window.addEventListener("load", removeVideosOnMobile);
+// Get video elements and buttons
+const video1 = document.getElementById("video1");
+const playButton1 = document.getElementById("playButton1");
+const pauseButton1 = document.getElementById("pauseButton1");
+
+const video2 = document.getElementById("video2");
+const playButton2 = document.getElementById("playButton2");
+const pauseButton2 = document.getElementById("pauseButton2");
+
+// Initialize controls for each video
+handleVideoControls(video1, playButton1, pauseButton1);
+handleVideoControls(video2, playButton2, pauseButton2);

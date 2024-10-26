@@ -1314,11 +1314,16 @@ html {
     font-size: 0.76rem;
     font-weight: bold;
   }
-  /* Container for the video section */
   /* Basic styles for video containers */
+  .video-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
   .video-box {
-    position: relative; /* Required for positioning the custom play button */
-    width: 48%;
+    position: relative;
+    width: 48%; /* Two videos per row */
     margin-bottom: 10px;
     border-radius: 8px;
     overflow: hidden;
@@ -1330,8 +1335,9 @@ html {
     border-radius: 8px;
   }
 
-  /* Custom play button styles */
-  .custom-play-button {
+  /* Custom play/pause button styles */
+  .custom-play-button,
+  .custom-pause-button {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -1348,14 +1354,22 @@ html {
     transition: all 0.3s ease;
   }
 
-  .custom-play-button:hover {
-    background-color: rgba(0, 0, 0, 0.7);
-  }
-
-  .custom-play-button svg {
+  .custom-play-button svg,
+  .custom-pause-button svg {
     width: 25px;
     height: 25px;
     fill: white;
+  }
+
+  .custom-play-button:hover,
+  .custom-pause-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  /* Hide native play button */
+  video::-webkit-media-controls-play-button {
+    display: none !important;
+    opacity: 0;
   }
 
   /* Hide native video play button */
