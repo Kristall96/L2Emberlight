@@ -521,7 +521,12 @@ html {
   position: absolute;
   top: 50%;
   transform: translateY(0);
-  background-color: #ff4500;
+  background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
+  border: 2px solid rgba(255, 255, 255, 0.2); /* Light border */
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
   color: white;
   border: none;
   padding: 10px 15px;
