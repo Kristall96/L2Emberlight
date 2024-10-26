@@ -1314,16 +1314,19 @@ html {
     font-size: 0.76rem;
     font-weight: bold;
   }
+  #top-videos {
+    padding: 3vw 0; /* Add padding for spacing */
+  }
   /* Best Videos Section */
   .video-container,
   .video-container2 {
     flex-direction: row; /* Stack videos vertically */
-    gap: 3vw; /* Add more space between videos */
+    gap: 1vw; /* Add more space between videos */
   }
 
-  .video-box {
-    width: 100%; /* Full width */
-    margin-bottom: 4vw; /* Add margin for spacing */
+  .video-box video {
+    width: 17vw;
+    height: 17vw;
   }
 
   /* Image Gallery Section */
