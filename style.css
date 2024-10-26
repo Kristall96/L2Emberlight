@@ -1322,52 +1322,8 @@ html {
     flex-direction: column; /* Force videos to be stacked vertically */
     justify-content: space-between;
   }
-
-  .video-box {
-    position: relative;
-    width: 100%; /* Full width to stack videos one below another */
-    margin-bottom: 10px;
-    border-radius: 8px;
-    overflow: hidden;
-  }
-
-  video {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
-
-  /* Потребителски play/pause бутон */
-  .custom-play-button,
-  .custom-pause-button {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    border: none;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.3s ease;
-  }
-
-  .custom-play-button svg,
-  .custom-pause-button svg {
-    width: 25px;
-    height: 25px;
-    fill: white;
-  }
-
-  /* Responsive styles for mobile */
-  @media (max-width: 768px) {
-    .video-box {
-      width: 100%; /* Full width on mobile to show videos one below another */
-    }
+  .video-container2 {
+    display: none; /* Hide video-container2 on mobile */
   }
   /* Image Gallery Section */
   #images-container {
