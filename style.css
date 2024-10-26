@@ -1336,11 +1336,22 @@ html {
     overflow: hidden;
   }
 
-  /* The video element */
   video {
-    width: 100%;
+    width: 100%; /* Ensures video is responsive */
     height: auto;
-    border-radius: 8px;
+    transform: scale(0.9); /* Shrinks the entire video including controls */
+  }
+
+  /* Reducing height and margins to make the control bar smaller */
+  video::-webkit-media-controls {
+    transform: scale(0.85); /* Scales down the controls */
+  }
+
+  /* Reducing the padding around the video controls */
+  video {
+    padding: 0 !important; /* Removes any padding */
+    margin: 0; /* Removes margin */
+    object-fit: contain; /* Makes sure the video fits without cropping */
   }
   /* Image Gallery Section */
   #images-container {
