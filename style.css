@@ -1338,7 +1338,7 @@ html {
 
   /* The video element */
   video {
-    width: 20vw;
+    width: 100%;
     height: auto;
     border-radius: 8px;
   }
