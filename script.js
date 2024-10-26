@@ -302,3 +302,36 @@ window.onclick = function (event) {
     modal.style.display = "none";
   }
 };
+// Function to check screen size and adjust video containers
+function adjustVideosForMobile() {
+  const videoContainers = document.querySelectorAll(
+    ".video-container, .video-container2"
+  );
+
+  if (window.innerWidth <= 768) {
+    videoContainers.forEach((container) => {
+      const videos = container.querySelectorAll(".video-box");
+
+      // Show only the first 3 videos in each container on mobile
+      videos.forEach((video, index) => {
+        if (index >= 3) {
+          video.style.display = "none";
+        } else {
+          video.style.display = "block";
+        }
+      });
+    });
+  } else {
+    // If screen is larger than mobile, show all videos
+    videoContainers.forEach((container) => {
+      const videos = container.querySelectorAll(".video-box");
+      videos.forEach((video) => {
+        video.style.display = "block"; // Show all videos
+      });
+    });
+  }
+}
+
+// Call the function on page load and on window resize
+window.addEventListener("load", adjustVideosForMobile);
+window.addEventListener("resize", adjustVideosForMobile);
