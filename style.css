@@ -1314,16 +1314,18 @@ html {
     font-size: 0.76rem;
     font-weight: bold;
   }
-  /* Basic styles for video containers */
+  /* Основен стил за видео контейнерите */
   .video-container {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
     gap: 10px;
+    flex-direction: column; /* Force videos to be stacked vertically */
+    justify-content: space-between;
   }
 
   .video-box {
     position: relative;
-    width: 48%; /* Two videos per row */
+    width: 100%; /* Full width to stack videos one below another */
     margin-bottom: 10px;
     border-radius: 8px;
     overflow: hidden;
@@ -1335,7 +1337,7 @@ html {
     border-radius: 8px;
   }
 
-  /* Custom play/pause button styles */
+  /* Потребителски play/pause бутон */
   .custom-play-button,
   .custom-pause-button {
     position: absolute;
@@ -1361,28 +1363,11 @@ html {
     fill: white;
   }
 
-  .custom-play-button:hover,
-  .custom-pause-button:hover {
-    background-color: rgba(0, 0, 0, 0.7);
-  }
-
-  /* Fullscreen button */
-  .fullscreen-button {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border: none;
-    border-radius: 4px;
-    padding: 5px 10px;
-    color: white;
-    cursor: pointer;
-  }
-
-  /* Hide native play button */
-  video::-webkit-media-controls-play-button {
-    display: none !important;
-    opacity: 0;
+  /* Responsive styles for mobile */
+  @media (max-width: 768px) {
+    .video-box {
+      width: 100%; /* Full width on mobile to show videos one below another */
+    }
   }
   /* Image Gallery Section */
   #images-container {

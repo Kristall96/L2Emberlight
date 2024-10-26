@@ -302,73 +302,132 @@ window.onclick = function (event) {
     modal.style.display = "none";
   }
 };
-function handleVideoControls(video, playButton, pauseButton, fullscreenButton) {
-  let hidePauseTimeout;
-
-  // Play the video and toggle buttons
-  playButton.addEventListener("click", function () {
-    video.play();
-    playButton.style.display = "none"; // Hide play button
-    pauseButton.style.display = "flex"; // Show pause button
-    hidePauseButton();
-  });
-
-  // Pause the video and toggle buttons
-  pauseButton.addEventListener("click", function () {
-    video.pause();
-    pauseButton.style.display = "none"; // Hide pause button
-    playButton.style.display = "flex"; // Show play button
-  });
-
-  // Show play button when the video is paused by clicking the video controls
-  video.addEventListener("pause", function () {
-    pauseButton.style.display = "none"; // Hide pause button
-    playButton.style.display = "flex"; // Show play button
-  });
-
-  // Show pause button when the video is playing
-  video.addEventListener("play", function () {
-    playButton.style.display = "none"; // Hide play button
-    pauseButton.style.display = "flex"; // Show pause button
-    hidePauseButton(); // Hide pause button after 1 second
-  });
-
-  // Hide pause button after 1 second
-  function hidePauseButton() {
-    clearTimeout(hidePauseTimeout);
-    hidePauseTimeout = setTimeout(function () {
-      pauseButton.style.display = "none"; // Hide pause button
-    }, 1000);
-  }
-
-  // Show pause button when user clicks on the video
-  video.addEventListener("click", function () {
-    pauseButton.style.display = "flex"; // Show pause button
-    hidePauseButton(); // Hide pause button again after 1 second
-  });
-
-  // Fullscreen functionality
-  fullscreenButton.addEventListener("click", function () {
-    if (video.requestFullscreen) {
-      video.requestFullscreen();
-    } else if (video.mozRequestFullScreen) {
-      // Firefox
-      video.mozRequestFullScreen();
-    } else if (video.webkitRequestFullscreen) {
-      // Chrome, Safari, Opera
-      video.webkitRequestFullscreen();
-    } else if (video.msRequestFullscreen) {
-      // IE/Edge
-      video.msRequestFullscreen();
-    }
-  });
+function isMobile() {
+  return window.innerWidth <= 768; // Ширина за мобилни устройства
 }
 
-// Get video elements and buttons
-const video1 = document.getElementById("video1");
-const playButton1 = document.getElementById("playButton1");
-const pauseButton1 = document.getElementById("pauseButton1");
-const fullscreenButton1 = document.getElementById("fullscreenButton1");
+if (isMobile()) {
+  const videoContainer = document.getElementById("top-videos");
 
-// Initialize controls for video
-handleVideoControls(video1, playButton1, pauseButton1, fullscreenButton1);
+  // Премахваме старите видеа
+  videoContainer.innerHTML = `
+    <h2 class="best-videos-title">Best Videos</h2>
+    <div class="video-container">
+      <div class="video-box">
+        <video id="video1" src="/l2images/newVideoMed.mp4" poster="/l2images/208929.jpg"></video>
+        <!-- Потребителски play бутон -->
+        <button class="custom-play-button" id="playButton1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M8 5v14l11-7z" />
+          </svg>
+        </button>
+        <!-- Потребителски pause бутон -->
+        <button class="custom-pause-button" id="pauseButton1" style="display: none;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="video-box">
+        <video id="video2" src="/l2images/newVideoMed.mp4" poster="/l2images/123428.jpg"></video>
+        <!-- Потребителски play бутон -->
+        <button class="custom-play-button" id="playButton2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M8 5v14l11-7z" />
+          </svg>
+        </button>
+        <!-- Потребителски pause бутон -->
+        <button class="custom-pause-button" id="pauseButton2" style="display: none;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="video-box">
+        <video id="video3" src="/l2images/newVideoMed.mp4" poster="/l2images/104514.jpg"></video>
+        <!-- Потребителски play бутон -->
+        <button class="custom-play-button" id="playButton3">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M8 5v14l11-7z" />
+          </svg>
+        </button>
+        <!-- Потребителски pause бутон -->
+        <button class="custom-pause-button" id="pauseButton3" style="display: none;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="video-box">
+        <video id="video4" src="/l2images/newVideoMed.mp4" poster="/l2images/208929.jpg"></video>
+        <!-- Потребителски play бутон -->
+        <button class="custom-play-button" id="playButton4">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M8 5v14l11-7z" />
+          </svg>
+        </button>
+        <!-- Потребителски pause бутон -->
+        <button class="custom-pause-button" id="pauseButton4" style="display: none;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="video-box">
+        <video id="video5" src="/l2images/newVideoMed.mp4" poster="/l2images/90528.jpg"></video>
+        <!-- Потребителски play бутон -->
+        <button class="custom-play-button" id="playButton5">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M8 5v14l11-7z" />
+          </svg>
+        </button>
+        <!-- Потребителски pause бутон -->
+        <button class="custom-pause-button" id="pauseButton5" style="display: none;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  `;
+
+  // Добавяме JavaScript логика за play/pause бутоните
+  function setupCustomControls(videoId, playButtonId, pauseButtonId) {
+    const video = document.getElementById(videoId);
+    const playButton = document.getElementById(playButtonId);
+    const pauseButton = document.getElementById(pauseButtonId);
+
+    playButton.addEventListener("click", function () {
+      video.play();
+      playButton.style.display = "none";
+      pauseButton.style.display = "flex";
+    });
+
+    pauseButton.addEventListener("click", function () {
+      video.pause();
+      playButton.style.display = "flex";
+      pauseButton.style.display = "none";
+    });
+
+    video.addEventListener("pause", function () {
+      playButton.style.display = "flex";
+      pauseButton.style.display = "none";
+    });
+
+    video.addEventListener("play", function () {
+      playButton.style.display = "none";
+      pauseButton.style.display = "flex";
+    });
+  }
+
+  // Настройваме бутоните за всички 5 видеа
+  setupCustomControls("video1", "playButton1", "pauseButton1");
+  setupCustomControls("video2", "playButton2", "pauseButton2");
+  setupCustomControls("video3", "playButton3", "pauseButton3");
+  setupCustomControls("video4", "playButton4", "pauseButton4");
+  setupCustomControls("video5", "playButton5", "pauseButton5");
+}
