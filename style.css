@@ -1271,7 +1271,7 @@ html {
     font-size: 0.8rem; /* Adjust font size for readability */
   }
   #forP p {
-    font-size: 1rem; /* Adjust font size */
+    font-size: 0.9rem; /* Adjust font size */
     text-align: left; /* Align text to the left */
     margin-left: 0; /* Remove any extra margin that might affect alignment */
     padding-left: 0; /* Ensure no padding affecting the alignment */
