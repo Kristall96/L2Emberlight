@@ -1245,7 +1245,7 @@ html {
 
   #feature-left-div h4,
   #features-right-div h4 {
-    font-size: 1rem;
+    font-size: 1.05rem;
     padding-left: 3.5vw;
   }
 
@@ -1257,7 +1257,7 @@ html {
   #features-content {
     display: flex;
     flex-direction: row; /* Ensure it's in row layout for non-mobile screens */
-    justify-content: space-between; /* Ensure the elements are spaced out */
+    margin-left: -1.75vw;
   }
 
   #feature-left-div,
@@ -1275,7 +1275,7 @@ html {
     text-align: left; /* Align text to the left */
     margin-left: 0; /* Remove any extra margin that might affect alignment */
     padding-left: 0; /* Ensure no padding affecting the alignment */
-    padding-left: 6vw;
+    padding-left: 5vw;
   }
 
   .forP p {
