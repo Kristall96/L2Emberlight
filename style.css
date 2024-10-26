@@ -1336,7 +1336,7 @@ html {
     font-size: 0.8rem; /* Adjust font size for readability */
   }
   #forP p {
-    font-size: 1rem; /* Adjust font size for readability */
+    font-size: 0.8rem; /* Adjust font size for readability */
   }
 
   /* Event Calendar Section */
@@ -1371,7 +1371,7 @@ html {
   /* Best Videos Section */
   .video-container,
   .video-container2 {
-    flex-direction: column; /* Stack videos vertically */
+    flex-direction: row; /* Stack videos vertically */
     gap: 3vw; /* Add more space between videos */
   }
 
@@ -1382,7 +1382,7 @@ html {
 
   /* Image Gallery Section */
   #images-container {
-    flex-direction: column; /* Stack images vertically */
+    flex-direction: row; /* Stack images vertically */
     gap: 3vw; /* Increase gap between images */
     padding: 2vw 0; /* Add padding for spacing */
   }
