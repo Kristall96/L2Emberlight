@@ -1230,6 +1230,9 @@ html {
 .imageGallery_galleryImg:hover {
   transform: scale(1.05);
 }
+#imageGallery_lightboxModal {
+  display: none; /* Ensure it's hidden by default */
+}
 
 /* Modal adjustments for mobile */
 @media (max-width: 768px) {
