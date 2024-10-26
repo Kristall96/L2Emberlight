@@ -241,3 +241,18 @@ document.addEventListener("keydown", (e) => {
     imageGallery_stopAutoPlay();
   }
 });
+// Function to check screen width and replace footer text
+function updateFooterTextForMobile() {
+  const footerText = document.getElementById("footer-text");
+
+  // Check if the screen width is less than or equal to 768px
+  if (window.innerWidth <= 768) {
+    footerText.innerHTML = "&copy; 2024 Emberlight | 2024"; // Modify text for mobile
+  }
+}
+
+// Run on initial load
+updateFooterTextForMobile();
+
+// Listen for window resize to handle dynamic screen size changes
+window.addEventListener("resize", updateFooterTextForMobile);

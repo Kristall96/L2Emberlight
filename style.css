@@ -1064,6 +1064,7 @@ html {
 .footer-links ul {
   list-style: none;
   display: flex;
+
   gap: 2vw;
   margin: 0;
   padding: 0;
@@ -1233,6 +1234,7 @@ html {
 #imageGallery_lightboxModal {
   display: none; /* Ensure it's hidden by default */
 }
+/* Mobile-specific sidebar width */
 
 /* Modal adjustments for mobile */
 @media (max-width: 768px) {
@@ -1534,7 +1536,7 @@ html {
   }
 
   .footer-links ul {
-    flex-direction: column; /* Stack links vertically */
+    flex-direction: row; /* Stack links vertically */
     gap: 2vw; /* Add space between links */
   }
 
@@ -1561,5 +1563,177 @@ html {
   #prevBtn,
   #nextBtn {
     font-size: 1.5rem; /* Adjust arrow size */
+  }
+  .side-bar {
+    position: fixed; /* Fixed positioning */
+    width: 100%; /* Full width on mobile */
+    height: 100%; /* Full height on mobile */
+    background-color: rgba(0, 0, 0, 0.8); /* Set background color */
+    transform: translateX(-100%); /* Hide sidebars off-screen */
+    transition: transform 0.3s ease; /* Smooth transition for sliding in/out */
+  }
+
+  /* Adjust the right sidebar positioning */
+  #sideBarRight {
+    right: 0;
+    left: auto;
+    transform: translateX(100%); /* Hide it off the right side */
+  }
+
+  /* Show the left sidebar when toggled */
+  #sideBarLeft.open {
+    transform: translateX(0); /* Slide in */
+  }
+
+  /* Show the right sidebar when toggled */
+  #sideBarRight.open {
+    transform: translateX(0); /* Slide in */
+  }
+
+  /* Ensure no padding or margins in the container */
+  #sideBars {
+    padding: 0;
+    margin: 0;
+  }
+  .side-bar {
+    position: fixed;
+    top: 0;
+    width: 50%; /* Set the width to 50% */
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+  }
+
+  /* Adjust right sidebar positioning */
+  #sideBarRight {
+    right: 0;
+    left: auto;
+    transform: translateX(100%); /* Move it off-screen to the right initially */
+  }
+
+  /* Open state for left sidebar */
+  #sideBarLeft.open {
+    transform: translateX(0); /* Slide it in from the left */
+    width: 70vw;
+  }
+
+  /* Open state for right sidebar */
+  #sideBarRight.open {
+    transform: translateX(0); /* Slide it in from the right */
+    width: 70vw;
+  }
+
+  /* Ensure sidebars stack content properly in 50% width */
+  .video-gallery,
+  .image-gallery {
+    padding: 10px;
+    text-align: center;
+  }
+
+  /* Make video smaller on mobile */
+  .side-bar video {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Adjust button for mobile */
+  .open-btn {
+    font-size: 0.5rem; /* Make the button more accessible */
+    padding: 10px 20px;
+  }
+
+  #openLeft {
+    margin-right: 55px;
+  }
+  #openRight {
+    margin-left: 10px;
+  }
+  /* Ensure the section does not overflow */
+  #sideBars {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+  }
+}
+@media (max-width: 768px) {
+  /* General mobile reset */
+  html,
+  body {
+    overflow-x: hidden;
+    width: 100vw;
+  }
+
+  /* Sidebar adjustments for mobile */
+  .side-bar {
+    width: 70vw; /* Adjust sidebar width to 70% of the viewport */
+    transform: translateX(-100%); /* Ensure it's hidden initially */
+    transition: transform 0.3s ease; /* Smooth transition for opening */
+  }
+
+  #sideBarRight {
+    transform: translateX(100%); /* Right sidebar hidden */
+  }
+
+  #sideBarLeft.open,
+  #sideBarRight.open {
+    transform: translateX(0); /* Ensure sidebar opens correctly */
+  }
+
+  /* Ensure content inside sidebars is constrained */
+  .side-bar video,
+  .side-bar img {
+    max-width: 100%; /* Constrain to sidebar width */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  /* Prevent overflow in sections */
+  section,
+  img,
+  video {
+    max-width: 100%; /* Constrain to viewport width */
+    height: auto;
+  }
+
+  /* Hide vertical scrolling bars if needed */
+  section,
+  .main-content {
+    overflow-x: hidden;
+  }
+
+  /* Adjust button positioning */
+  .open-btn {
+    padding: 10px 15px;
+    font-size: 1rem;
+    top: 40%;
+  }
+
+  #openLeft {
+    margin-right: 57px;
+  }
+
+  #openRight {
+    margin-left: 67px;
+  }
+}
+/* Default styles (for desktop) */
+#hopzone img {
+  width: 140px;
+  height: 120px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 99999;
+  border: 0;
+}
+
+/* Styles for mobile (screens 768px and below) */
+@media (max-width: 768px) {
+  #hopzone img {
+    width: 100px; /* Adjust the width */
+    height: 85px; /* Adjust the height */
+    bottom: 10px; /* Optionally adjust the position */
+    right: 10px; /* Optionally adjust the position */
   }
 }
