@@ -270,38 +270,6 @@ document.addEventListener("keydown", (e) => {
     stopAutoPlay(); // Stop autoplay when closed
   }
 });
-
-// Get the modal
-var modal = document.getElementById("imageModal");
-
-// Get the modal image element
-var modalImg = document.getElementById("imgModal");
-
-// Get all images in the gallery
-var images = document.getElementsByClassName("gallery-img");
-
-// Get the close button
-var closeBtns = document.getElementsByClassName("close")[0];
-
-// Loop through all images and add click event
-for (var i = 0; i < images.length; i++) {
-  images[i].onclick = function () {
-    modal.style.display = "block";
-    modalImg.src = this.src;
-  };
-}
-
-// Close the modal when clicking on the "x" button
-closeBtns.onclick = function () {
-  modal.style.display = "none";
-};
-
-// Close the modal when clicking outside of the image
-window.onclick = function (event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-};
 // Function to check screen size and adjust video containers
 function adjustVideosForMobile() {
   const videoContainers = document.querySelectorAll(
@@ -335,3 +303,153 @@ function adjustVideosForMobile() {
 // Call the function on page load and on window resize
 window.addEventListener("load", adjustVideosForMobile);
 window.addEventListener("resize", adjustVideosForMobile);
+
+// Get the modal
+var modal = document.getElementById("imageModal");
+
+// Get the modal image element
+var modalImg = document.getElementById("imgModal");
+
+// Get all images in the gallery
+var images = document.getElementsByClassName("gallery-img");
+
+// Get the close button
+var closeBtns = document.getElementsByClassName("close")[0];
+
+// Loop through all images and add click event
+for (var i = 0; i < images.length; i++) {
+  images[i].onclick = function () {
+    modal.style.display = "block";
+    modalImg.src = this.src;
+  };
+}
+
+// Close the modal when clicking on the "x" button
+closeBtns.onclick = function () {
+  modal.style.display = "none";
+};
+
+// Close the modal when clicking outside of the image
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};
+function setupVideoControls(
+  videoId,
+  playPauseBtnId,
+  muteBtnId,
+  seekBarId,
+  volumeBarId
+) {
+  const video = document.getElementById(videoId);
+  const playPauseButton = document.getElementById(playPauseBtnId);
+  const muteButton = document.getElementById(muteBtnId);
+  const seekBar = document.getElementById(seekBarId);
+  const volumeBar = document.getElementById(volumeBarId);
+
+  // Play/Pause functionality
+  playPauseButton.addEventListener("click", () => {
+    if (video.paused) {
+      video.play();
+      playPauseButton.textContent = "Pause";
+    } else {
+      video.pause();
+      playPauseButton.textContent = "Play";
+    }
+  });
+
+  // Mute/Unmute functionality
+  muteButton.addEventListener("click", () => {
+    video.muted = !video.muted;
+    muteButton.textContent = video.muted ? "Unmute" : "Mute";
+  });
+
+  // Seek bar functionality
+  seekBar.addEventListener("input", () => {
+    const time = video.duration * (seekBar.value / 100);
+    video.currentTime = time;
+  });
+
+  video.addEventListener("timeupdate", () => {
+    const value = (100 / video.duration) * video.currentTime;
+    seekBar.value = value;
+  });
+
+  // Volume control functionality
+  volumeBar.addEventListener("input", () => {
+    video.volume = volumeBar.value;
+  });
+}
+
+// Initialize custom controls for all videos
+setupVideoControls(
+  "video1",
+  "play-pause1",
+  "mute1",
+  "seek-bar1",
+  "volume-bar1"
+);
+setupVideoControls(
+  "video2",
+  "play-pause2",
+  "mute2",
+  "seek-bar2",
+  "volume-bar2"
+);
+setupVideoControls(
+  "video3",
+  "play-pause3",
+  "mute3",
+  "seek-bar3",
+  "volume-bar3"
+);
+setupVideoControls(
+  "video4",
+  "play-pause4",
+  "mute4",
+  "seek-bar4",
+  "volume-bar4"
+);
+setupVideoControls(
+  "video5",
+  "play-pause5",
+  "mute5",
+  "seek-bar5",
+  "volume-bar5"
+);
+setupVideoControls(
+  "video6",
+  "play-pause6",
+  "mute6",
+  "seek-bar6",
+  "volume-bar6"
+);
+setupVideoControls(
+  "video7",
+  "play-pause7",
+  "mute7",
+  "seek-bar7",
+  "volume-bar7"
+);
+setupVideoControls(
+  "video8",
+  "play-pause8",
+  "mute8",
+  "seek-bar8",
+  "volume-bar8"
+);
+setupVideoControls(
+  "video9",
+  "play-pause9",
+  "mute9",
+  "seek-bar9",
+  "volume-bar9"
+);
+setupVideoControls(
+  "video10",
+  "play-pause10",
+  "mute10",
+  "seek-bar10",
+  "volume-bar10"
+);
