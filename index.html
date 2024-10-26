@@ -10,7 +10,6 @@
       integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer" />
-
     <title>Lineage 2 Emberlight</title>
   </head>
   <body>
@@ -40,7 +39,6 @@
         </ul>
       </div>
     </section>
-
     <!-- Main Content Section -->
     <section class="main-content">
       <div class="main-content-div">
@@ -50,7 +48,6 @@
           autoplay
           loop
           muted></video>
-
         <div class="video-overlay">
           <div class="leftSideText">
             <h1 class="heading-gradient">Welcome to Lineage @ Emberlight</h1>
@@ -76,7 +73,6 @@
             </p>
           </div>
         </div>
-
         <!-- Button now below the divider -->
         <div class="button-container">
           <button class="gaming-button">Play Now</button>
@@ -179,7 +175,6 @@
     <!-- Desktop Videos -->
     <section id="top-videos">
       <h2 class="best-videos-title">Best Videos</h2>
-
       <div class="video-container">
         <div class="video-box">
           <video src="/l2images/newVideoMed.mp4" controls poster="/l2images/208929.jpg"></video>
@@ -197,7 +192,6 @@
           <video src="/l2images/newVideoMed.mp4" controls poster="/l2images/90528.jpg"></video>
         </div>
       </div>
-
       <div class="video-container2">
         <div class="video-box">
           <video src="/l2images/newVideoMed.mp4" controls poster="/l2images/208929.jpg"></video>
@@ -216,52 +210,54 @@
         </div>
       </div>
     </section>
+<!-- Images Gallery for Desktop and Mobile -->
+<section id="image-event">
+  <h2>Best Images</h2>
+  <div id="imageGallery_imagesContainer">
+    <div class="image-box">
+      <img src="/l2images/104514.jpg" alt="Image 1" class="imageGallery_galleryImg" />
+    </div>
+    <div class="image-box">
+      <img src="/l2images/123428.jpg" alt="Image 2" class="imageGallery_galleryImg" />
+    </div>
+    <div class="image-box">
+      <img src="/l2images/176754.jpg" alt="Image 3" class="imageGallery_galleryImg" />
+    </div>
+    <div class="image-box">
+      <img src="/l2images/208929.jpg" alt="Image 4" class="imageGallery_galleryImg" />
+    </div>
+    <div class="image-box">
+      <img src="/l2images/381939.jpg" alt="Image 5" class="imageGallery_galleryImg" />
+    </div>
+    <div class="image-box">
+      <img src="/l2images/90528.jpg" alt="Image 6" class="imageGallery_galleryImg" />
+    </div>
+    <div class="image-box">
+      <img src="/l2images/104514.jpg" alt="Image 7" class="imageGallery_galleryImg" />
+    </div>
+    <div class="image-box">
+      <img src="/l2images/104514.jpg" alt="Image 8" class="imageGallery_galleryImg" />
+    </div>
+    <div class="image-box">
+      <img src="/l2images/104514.jpg" alt="Image 9" class="imageGallery_galleryImg" />
+    </div>
+    <div class="image-box">
+      <img src="/l2images/104514.jpg" alt="Image 10" class="imageGallery_galleryImg" />
+    </div>
+  </div>
 
-    <!-- Images Gallery -->
-    <section id="image-event">
-      <h2>Best Images</h2>
-      <div id="images-container">
-        <div class="image-box">
-          <img src="/l2images/104514.jpg" alt="Image 1" class="gallery-img" />
-        </div>
-        <div class="image-box">
-          <img src="/l2images/104514.jpg" alt="Image 2" class="gallery-img" />
-        </div>
-        <div class="image-box">
-          <img src="/l2images/104514.jpg" alt="Image 3" class="gallery-img" />
-        </div>
-        <div class="image-box">
-          <img src="/l2images/104514.jpg" alt="Image 4" class="gallery-img" />
-        </div>
-        <div class="image-box">
-          <img src="/l2images/104514.jpg" alt="Image 5" class="gallery-img" />
-        </div>
-      </div>
-      <div id="images-container">
-        <div class="image-box">
-          <img src="/l2images/104514.jpg" alt="Image 1" class="gallery-img" />
-        </div>
-        <div class="image-box">
-          <img src="/l2images/104514.jpg" alt="Image 2" class="gallery-img" />
-        </div>
-        <div class="image-box">
-          <img src="/l2images/104514.jpg" alt="Image 3" class="gallery-img" />
-        </div>
-        <div class="image-box">
-          <img src="/l2images/104514.jpg" alt="Image 4" class="gallery-img" />
-        </div>
-        <div class="image-box">
-          <img src="/l2images/104514.jpg" alt="Image 5" class="gallery-img" />
-        </div>
-      </div>
+  <!-- Modal for displaying larger image -->
+  <div id="imageGallery_lightboxModal" class="modal">
+    <span class="imageGallery_close">&times;</span>
+    <img class="modal-content" id="imageGallery_lightboxImage" />
+    <!-- Modal Navigation -->
+    <button id="imageGallery_prevBtn" class="modal-nav-btn">⟨</button>
+    <button id="imageGallery_nextBtn" class="modal-nav-btn">⟩</button>
 
-      <!-- Modal for displaying larger image -->
-      <div id="imageModal" class="modal">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="imgModal" />
-      </div>
-    </section>
-
+    <!-- Thumbnail Gallery (Visible only when the modal is open) -->
+    <div class="imageGallery_thumbnailGallery"></div>
+  </div>
+</section>
     <!-- Sidebar for videos and image galleries -->
     <section id="sideBars">
       <!-- Left Sidebar (Videos) -->
@@ -277,7 +273,6 @@
           </video>
         </div>
       </div>
-
       <!-- Right Sidebar (Image Gallery) -->
       <div id="sideBarRight" class="side-bar">
         <button id="openRight" class="open-btn right-btn">
@@ -294,7 +289,6 @@
         </div>
       </div>
     </section>
-
     <!-- Modal for Lightbox Gallery with Thumbnails and Controls -->
     <div id="lightbox" class="lightbox">
       <span class="close">&times;</span>
@@ -303,15 +297,12 @@
         <button id="prevBtn">&#10094;</button>
         <button id="nextBtn">&#10095;</button>
       </div>
-
       <!-- Thumbnail Gallery with Left/Right Buttons -->
       <div class="thumbnail-gallery-container">
         <button class="thumb-nav-button left" id="thumbPrevBtn">
           <i class="fa fa-angle-double-left"></i>
         </button>
-
         <div class="thumbnail-gallery"></div>
-
         <button class="thumb-nav-button right" id="thumbNextBtn">
           <i class="fa fa-angle-double-right"></i>
         </button>
@@ -341,15 +332,6 @@
       <div class="footer-bottom">
         <p>&copy; 2024 Emberlight | Designed by Team Emberlight</p>
       </div>
-      
-
-
-
-
-
-
-
-
       <a href="https://l2.hopzone.net/site/vote/106355/1"><img src="https://l2.hopzone.net/assets/img/banners/vote_banners/banner_4.png" alt="Vote for L2EMBERLIGHT.COM" title="L2.HOPZONE.NET – Lineage 2 Servers ranking" style="border:0; position: fixed; z-index:99999; bottom: 0; right: 0; width:140px; height: 120px;"></a>
     <!-- JavaScript for Lightbox Gallery and Sidebar Navigation -->
     <script src="script.js"></script>
