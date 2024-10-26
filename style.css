@@ -1284,13 +1284,15 @@ html {
 
   /* Event Calendar Section */
   #events-section {
-    padding: 5vw 0; /* Add padding for spacing */
+    padding: 3vw 0; /* Add padding for spacing */
   }
 
   .events-container {
     flex-direction: row; /* Stack events vertically */
-    gap: 3vw; /* Increase spacing between events */
-    width: 90%; /* Adjust width */
+    gap: 1.5vw; /* Increase spacing between events */
+    width: 95%; /* Adjust width */
+    margin-top: 3vw;
+    /* marginvw; */
   }
 
   .event-box {
@@ -1299,14 +1301,14 @@ html {
   }
 
   .event-box img {
-    width: 25vw;
-    height: 15vw;
+    width: 27vw;
+    height: 18vw;
     border-radius: 1vw;
     margin-bottom: 1vw;
   }
 
   #eventP p {
-    font-size: 0.5rem;
+    font-size: 0.7rem;
   }
   #eventP #event-title {
     font-size: 0.76rem;
