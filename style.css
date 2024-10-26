@@ -1308,10 +1308,11 @@ html {
   }
 
   #eventP p {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
   }
   #eventP #event-title {
     font-size: 0.76rem;
+    font-weight: bold;
   }
   /* Best Videos Section */
   .video-container,
