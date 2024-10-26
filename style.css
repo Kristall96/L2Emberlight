@@ -1257,7 +1257,7 @@ html {
   #features-content {
     display: flex;
     flex-direction: row; /* Ensure it's in row layout for non-mobile screens */
-    margin-left: -1.75vw;
+    margin-left: 2vw;
   }
 
   #feature-left-div,
