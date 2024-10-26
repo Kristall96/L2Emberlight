@@ -531,6 +531,8 @@ html {
 }
 /* Features Section Styling */
 #features-section {
+  padding-bottom: 4vw;
+  padding-top: 2vw;
   display: flex;
   flex-direction: column; /* Stack title and content vertically */
   background: linear-gradient(90deg, #141e30, #243b55);
@@ -644,7 +646,8 @@ html {
 
 /* Event Section Styling */
 #events-section {
-  padding-bottom: 3vw;
+  padding-bottom: 4vw;
+  padding-top: 2vw;
   background: linear-gradient(90deg, #141e30, #243b55);
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
   margin: 0;
@@ -710,7 +713,8 @@ html {
 
 /* Video Section Styling */
 #top-videos {
-  padding-bottom: 3vw;
+  padding-bottom: 4vw;
+  padding-top: 2vw;
   background: linear-gradient(90deg, #141e30, #243b55);
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
   margin: 0;
@@ -738,7 +742,6 @@ html {
   gap: 2vw; /* Space between videos */
   max-width: 80vw;
   margin: 0.5vw auto; /* Centers the entire parent div itself */
-  padding: 0.5vw;
 }
 .video-container2 {
   display: flex;
@@ -747,28 +750,25 @@ html {
   gap: 2vw; /* Space between videos */
   max-width: 80vw;
   margin: 0.5vw auto; /* Centers the entire parent div itself */
-  padding: 0.5vw;
 }
 
 .video-box {
   flex: 1;
   justify-content: center;
   background-color: #1f2b36;
-  padding: 0.5vw;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
-  border-radius: 0.3vw;
 }
 
 .video-box video {
   width: 100%;
-  height: auto;
-  border-radius: 0.3vw;
+  height: 100%;
   object-fit: cover; /* This ensures the poster image fills the box while maintaining aspect ratio */
 }
 
 /* Image Gallery Section Styling */
 #image-event {
-  padding-bottom: 3vw;
+  padding-bottom: 4vw;
+  padding-top: 2vw;
   background: linear-gradient(90deg, #141e30, #243b55);
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
   margin: 0;
@@ -1229,7 +1229,7 @@ html {
 
   /* Features Section */
   #features-section {
-    padding: 5vw 0; /* Add padding for spacing */
+    padding: 4vw 0 10vw 0;
   }
 
   .feature-container {
@@ -1284,7 +1284,7 @@ html {
 
   /* Event Calendar Section */
   #events-section {
-    padding: 3vw 0; /* Add padding for spacing */
+    padding: 4vw 0 10vw 0;
   }
 
   .events-container {
@@ -1314,6 +1314,9 @@ html {
     font-size: 0.76rem;
     font-weight: bold;
   }
+  #top-videos {
+    padding: 4vw 0 10vw 0;
+  }
   /* Основен стил за видео контейнерите */
   .video-container {
     display: flex;
@@ -1321,9 +1324,14 @@ html {
     gap: 10px;
     flex-direction: column; /* Force videos to be stacked vertically */
     justify-content: space-between;
+    margin-top: 5vw;
   }
   .video-container2 {
     display: none; /* Hide video-container2 on mobile */
+  }
+
+  #image-event {
+    padding: 4vw 0 10vw 0;
   }
   /* Image Gallery Section */
   #images-container {
