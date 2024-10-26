@@ -1315,43 +1315,53 @@ html {
     font-weight: bold;
   }
   /* Container for the video section */
-  #top-videos {
-    padding: 3vw 0;
-  }
-
-  /* Flexbox to align videos side by side */
-  .video-container,
-  .video-container2 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 10px; /* Space between videos */
-  }
-
-  /* Each video box */
+  /* Basic styles for video containers */
   .video-box {
-    width: 48%; /* Two videos per row */
+    position: relative; /* Required for positioning the custom play button */
+    width: 48%;
     margin-bottom: 10px;
     border-radius: 8px;
     overflow: hidden;
   }
 
   video {
-    width: 100%; /* Ensures video is responsive */
+    width: 100%;
     height: auto;
-    transform: scale(0.9); /* Shrinks the entire video including controls */
+    border-radius: 8px;
   }
 
-  /* Reducing height and margins to make the control bar smaller */
-  video::-webkit-media-controls {
-    transform: scale(0.85); /* Scales down the controls */
+  /* Custom play button styles */
+  .custom-play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
   }
 
-  /* Reducing the padding around the video controls */
-  video {
-    padding: 0 !important; /* Removes any padding */
-    margin: 0; /* Removes margin */
-    object-fit: contain; /* Makes sure the video fits without cropping */
+  .custom-play-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  .custom-play-button svg {
+    width: 25px;
+    height: 25px;
+    fill: white;
+  }
+
+  /* Hide native video play button */
+  video::-webkit-media-controls-play-button {
+    display: none !important;
+    opacity: 0;
   }
   /* Image Gallery Section */
   #images-container {
