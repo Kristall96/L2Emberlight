@@ -302,13 +302,15 @@ window.onclick = function (event) {
     modal.style.display = "none";
   }
 };
-// Function to handle play/pause for a video
-function handleVideoControls(video, playButton, pauseButton) {
+function handleVideoControls(video, playButton, pauseButton, fullscreenButton) {
+  let hidePauseTimeout;
+
   // Play the video and toggle buttons
   playButton.addEventListener("click", function () {
     video.play();
     playButton.style.display = "none"; // Hide play button
     pauseButton.style.display = "flex"; // Show pause button
+    hidePauseButton();
   });
 
   // Pause the video and toggle buttons
@@ -328,6 +330,37 @@ function handleVideoControls(video, playButton, pauseButton) {
   video.addEventListener("play", function () {
     playButton.style.display = "none"; // Hide play button
     pauseButton.style.display = "flex"; // Show pause button
+    hidePauseButton(); // Hide pause button after 1 second
+  });
+
+  // Hide pause button after 1 second
+  function hidePauseButton() {
+    clearTimeout(hidePauseTimeout);
+    hidePauseTimeout = setTimeout(function () {
+      pauseButton.style.display = "none"; // Hide pause button
+    }, 1000);
+  }
+
+  // Show pause button when user clicks on the video
+  video.addEventListener("click", function () {
+    pauseButton.style.display = "flex"; // Show pause button
+    hidePauseButton(); // Hide pause button again after 1 second
+  });
+
+  // Fullscreen functionality
+  fullscreenButton.addEventListener("click", function () {
+    if (video.requestFullscreen) {
+      video.requestFullscreen();
+    } else if (video.mozRequestFullScreen) {
+      // Firefox
+      video.mozRequestFullScreen();
+    } else if (video.webkitRequestFullscreen) {
+      // Chrome, Safari, Opera
+      video.webkitRequestFullscreen();
+    } else if (video.msRequestFullscreen) {
+      // IE/Edge
+      video.msRequestFullscreen();
+    }
   });
 }
 
@@ -335,11 +368,7 @@ function handleVideoControls(video, playButton, pauseButton) {
 const video1 = document.getElementById("video1");
 const playButton1 = document.getElementById("playButton1");
 const pauseButton1 = document.getElementById("pauseButton1");
+const fullscreenButton1 = document.getElementById("fullscreenButton1");
 
-const video2 = document.getElementById("video2");
-const playButton2 = document.getElementById("playButton2");
-const pauseButton2 = document.getElementById("pauseButton2");
-
-// Initialize controls for each video
-handleVideoControls(video1, playButton1, pauseButton1);
-handleVideoControls(video2, playButton2, pauseButton2);
+// Initialize controls for video
+handleVideoControls(video1, playButton1, pauseButton1, fullscreenButton1);

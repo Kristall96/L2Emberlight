@@ -1366,13 +1366,20 @@ html {
     background-color: rgba(0, 0, 0, 0.7);
   }
 
-  /* Hide native play button */
-  video::-webkit-media-controls-play-button {
-    display: none !important;
-    opacity: 0;
+  /* Fullscreen button */
+  .fullscreen-button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    color: white;
+    cursor: pointer;
   }
 
-  /* Hide native video play button */
+  /* Hide native play button */
   video::-webkit-media-controls-play-button {
     display: none !important;
     opacity: 0;
