@@ -1329,14 +1329,15 @@ html {
 
   #feature-left-div,
   #features-right-div {
-    width: 43vw; /* Full width on mobile */
+    width: 46vw; /* Full width on mobile */
+    padding-top: 4vw;
   }
 
   .feature-text .align-star {
     font-size: 0.8rem; /* Adjust font size for readability */
   }
   #forP p {
-    font-size: 0.8rem; /* Adjust font size for readability */
+    font-size: 1rem; /* Adjust font size for readability */
   }
 
   /* Event Calendar Section */
