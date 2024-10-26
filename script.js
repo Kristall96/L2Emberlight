@@ -270,39 +270,6 @@ document.addEventListener("keydown", (e) => {
     stopAutoPlay(); // Stop autoplay when closed
   }
 });
-// Function to check screen size and adjust video containers
-function adjustVideosForMobile() {
-  const videoContainers = document.querySelectorAll(
-    ".video-container, .video-container2"
-  );
-
-  if (window.innerWidth <= 768) {
-    videoContainers.forEach((container) => {
-      const videos = container.querySelectorAll(".video-box");
-
-      // Show only the first 3 videos in each container on mobile
-      videos.forEach((video, index) => {
-        if (index >= 3) {
-          video.style.display = "none";
-        } else {
-          video.style.display = "block";
-        }
-      });
-    });
-  } else {
-    // If screen is larger than mobile, show all videos
-    videoContainers.forEach((container) => {
-      const videos = container.querySelectorAll(".video-box");
-      videos.forEach((video) => {
-        video.style.display = "block"; // Show all videos
-      });
-    });
-  }
-}
-
-// Call the function on page load and on window resize
-window.addEventListener("load", adjustVideosForMobile);
-window.addEventListener("resize", adjustVideosForMobile);
 
 // Get the modal
 var modal = document.getElementById("imageModal");
@@ -335,121 +302,24 @@ window.onclick = function (event) {
     modal.style.display = "none";
   }
 };
-function setupVideoControls(
-  videoId,
-  playPauseBtnId,
-  muteBtnId,
-  seekBarId,
-  volumeBarId
-) {
-  const video = document.getElementById(videoId);
-  const playPauseButton = document.getElementById(playPauseBtnId);
-  const muteButton = document.getElementById(muteBtnId);
-  const seekBar = document.getElementById(seekBarId);
-  const volumeBar = document.getElementById(volumeBarId);
+// Function to remove the last two videos on mobile devices
+function removeVideosOnMobile() {
+  // Check if the screen width is 768px or less
+  if (window.innerWidth <= 768) {
+    // Select the last two video-box elements
+    const videoBoxes = document.querySelectorAll(".video-box");
+    const lastVideo1 = videoBoxes[videoBoxes.length - 1]; // Last video
+    const lastVideo2 = videoBoxes[videoBoxes.length - 2]; // Second last video
 
-  // Play/Pause functionality
-  playPauseButton.addEventListener("click", () => {
-    if (video.paused) {
-      video.play();
-      playPauseButton.textContent = "Pause";
-    } else {
-      video.pause();
-      playPauseButton.textContent = "Play";
+    // Remove the last two videos
+    if (lastVideo1) {
+      lastVideo1.parentNode.removeChild(lastVideo1);
     }
-  });
-
-  // Mute/Unmute functionality
-  muteButton.addEventListener("click", () => {
-    video.muted = !video.muted;
-    muteButton.textContent = video.muted ? "Unmute" : "Mute";
-  });
-
-  // Seek bar functionality
-  seekBar.addEventListener("input", () => {
-    const time = video.duration * (seekBar.value / 100);
-    video.currentTime = time;
-  });
-
-  video.addEventListener("timeupdate", () => {
-    const value = (100 / video.duration) * video.currentTime;
-    seekBar.value = value;
-  });
-
-  // Volume control functionality
-  volumeBar.addEventListener("input", () => {
-    video.volume = volumeBar.value;
-  });
+    if (lastVideo2) {
+      lastVideo2.parentNode.removeChild(lastVideo2);
+    }
+  }
 }
 
-// Initialize custom controls for all videos
-setupVideoControls(
-  "video1",
-  "play-pause1",
-  "mute1",
-  "seek-bar1",
-  "volume-bar1"
-);
-setupVideoControls(
-  "video2",
-  "play-pause2",
-  "mute2",
-  "seek-bar2",
-  "volume-bar2"
-);
-setupVideoControls(
-  "video3",
-  "play-pause3",
-  "mute3",
-  "seek-bar3",
-  "volume-bar3"
-);
-setupVideoControls(
-  "video4",
-  "play-pause4",
-  "mute4",
-  "seek-bar4",
-  "volume-bar4"
-);
-setupVideoControls(
-  "video5",
-  "play-pause5",
-  "mute5",
-  "seek-bar5",
-  "volume-bar5"
-);
-setupVideoControls(
-  "video6",
-  "play-pause6",
-  "mute6",
-  "seek-bar6",
-  "volume-bar6"
-);
-setupVideoControls(
-  "video7",
-  "play-pause7",
-  "mute7",
-  "seek-bar7",
-  "volume-bar7"
-);
-setupVideoControls(
-  "video8",
-  "play-pause8",
-  "mute8",
-  "seek-bar8",
-  "volume-bar8"
-);
-setupVideoControls(
-  "video9",
-  "play-pause9",
-  "mute9",
-  "seek-bar9",
-  "volume-bar9"
-);
-setupVideoControls(
-  "video10",
-  "play-pause10",
-  "mute10",
-  "seek-bar10",
-  "volume-bar10"
-);
+// Run the function when the page is loaded
+window.addEventListener("load", removeVideosOnMobile);

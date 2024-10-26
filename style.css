@@ -1316,119 +1316,32 @@ html {
   }
   /* Container for the video section */
   #top-videos {
-    padding: 3vw 0; /* Add padding for spacing */
+    padding: 3vw 0;
   }
 
-  /* Container for each video and its controls */
-  .video-container {
+  /* Flexbox to align videos side by side */
+  .video-container,
+  .video-container2 {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+    justify-content: space-between;
+    gap: 10px; /* Space between videos */
   }
 
-  /* Video box styling */
+  /* Each video box */
   .video-box {
-    position: relative;
-    width: 100%; /* Full width for responsiveness */
-    max-width: 400px; /* Maximum width for videos on larger screens */
-    margin-bottom: 20px;
-    overflow: hidden; /* Ensures controls do not overflow */
-    background-color: #000; /* Video container background */
-    border-radius: 8px; /* Slightly rounded corners */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    width: 48%; /* Two videos per row */
+    margin-bottom: 10px;
+    border-radius: 8px;
+    overflow: hidden;
   }
 
-  /* Video element itself */
-  .video-box video {
-    width: 100%;
+  /* The video element */
+  video {
+    width: 20vw;
     height: auto;
-    object-fit: cover;
-    display: block;
-    border-radius: 8px; /* Matches the container’s border-radius */
+    border-radius: 8px;
   }
-
-  /* Video controls styling */
-  .video-controls {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-    padding: 10px;
-    gap: 10px;
-    transition: all 0.3s ease-in-out; /* Smooth transitions */
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-  }
-
-  /* Play/Pause and Mute buttons */
-  .play-pause,
-  .mute {
-    background-color: #fff;
-    border: none;
-    padding: 6px 12px;
-    cursor: pointer;
-    border-radius: 4px;
-    font-size: 1rem;
-    font-weight: bold;
-    color: #000;
-    transition: background-color 0.3s ease;
-  }
-
-  .play-pause:hover,
-  .mute:hover {
-    background-color: #f1f1f1;
-  }
-
-  /* Seek bar */
-  .seek-bar {
-    flex-grow: 1;
-    margin: 0 10px;
-    height: 5px;
-    background-color: #fff;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-
-  /* Volume bar */
-  .volume-bar {
-    width: 80px;
-    height: 5px;
-    background-color: #fff;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-
-  /* For mobile screens */
-
-  /* Ensure videos are stacked and responsive */
-  .video-box {
-    max-width: 100%; /* Full width on mobile */
-  }
-
-  .play-pause,
-  .mute {
-    font-size: 0.8rem; /* Slightly smaller font for mobile */
-    padding: 4px 8px; /* Adjust padding */
-  }
-
-  .seek-bar {
-    height: 4px; /* Thinner seek bar on mobile */
-  }
-
-  .volume-bar {
-    width: 60px; /* Smaller volume bar on mobile */
-    height: 4px; /* Thinner volume bar */
-  }
-
-  .video-controls {
-    padding: 5px; /* Reduce padding for mobile */
-  }
-
   /* Image Gallery Section */
   #images-container {
     flex-direction: row; /* Stack images vertically */
