@@ -13,7 +13,7 @@ body {
 }
 #menu {
   position: sticky;
-  top: 23.4333px; /* Adjust this value as needed, e.g., `top: 10px;` for some spacing from the top */
+  top: 28px; /* Adjust this value as needed, e.g., `top: 10px;` for some spacing from the top */
   z-index: 10; /* Ensures it stays above other elements */
 }
 #socialIconsSection {
