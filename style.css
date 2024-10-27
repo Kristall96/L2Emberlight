@@ -2072,4 +2072,19 @@ html {
     right: 3vw;
     padding-bottom: 35vw;
   }
+  #lightboxImage {
+    margin-top: 25vw;
+    width: 85vw;
+  }
+  .thumbnail-gallery {
+    width: 55vw;
+  }
+  #nextBtn {
+    margin-top: -8vw;
+    margin-right: -9vw;
+  }
+  #prevBtn {
+    margin-top: -8vw;
+    margin-left: -9vw;
+  }
 }
