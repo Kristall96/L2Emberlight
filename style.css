@@ -1287,7 +1287,7 @@ html {
 
   /* Social Icons Section */
   #socialIconsSection {
-    padding: 2vw 0; /* Add vertical padding */
+    padding: 0.5vw 0; /* Add vertical padding */
   }
 
   #socialIcons {
@@ -1297,13 +1297,13 @@ html {
   }
 
   .menu-icons-list {
-    width: 100%; /* Full width */
+    width: 50%; /* Full width */
     justify-content: space-around; /* Spread icons */
     gap: 0; /* No gap between icons */
   }
 
   .menu-icons-item i {
-    font-size: 1.5rem; /* Increase icon size slightly for touch */
+    font-size: 1rem; /* Increase icon size slightly for touch */
   }
 
   /* Menu Section */
