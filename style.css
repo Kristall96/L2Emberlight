@@ -1404,10 +1404,7 @@ html {
 
     background: linear-gradient(
       90deg,
-      #0a3d62,
-      /* Dark navy blue */ #1e6091,
-      /* Deep cerulean blue */ #82cfff,
-      /* Light sky blue */ #eaf6ff /* Very light blue, almost white */
+      rgba(255, 255, 255, 0.5) /* Semi-transparent black */ rgba(0, 0, 0, 0.5)
     );
     color: #000;
     border: 2px solid rgba(10, 40, 80, 0.6);
