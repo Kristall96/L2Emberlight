@@ -1321,7 +1321,7 @@ html {
 
   .menu-item {
     font-size: 0.7rem; /* Increase size for readability */
-    padding: 2vw; /* Increase padding for touch-friendliness */
+    padding: 1.8vw; /* Increase padding for touch-friendliness */
     text-align: center; /* Center text */
   }
 
@@ -1364,14 +1364,71 @@ html {
   }
 
   .button-container {
-    top: auto; /* Remove fixed position */
-    margin-top: 4vw; /* Add margin for spacing */
   }
 
   .gaming-button {
-    font-size: 1.2rem; /* Adjust button size */
-    padding: 10px 40px; /* Adjust padding for touch */
-    margin-top: 5vw; /* Add margin for spacing */
+    font-size: 0.8rem; /* Adjust button size */
+    position: relative; /* Make sure the element can be adjusted relatively */
+    left: 15%; /* Position it 50% from the left edge */
+    transform: translateX(
+      -50%
+    ); /* Offset it by 50% of its own width to truly center */
+
+    background: linear-gradient(
+      90deg,
+      #0a3d62,
+      /* Dark navy blue */ #1e6091,
+      /* Deep cerulean blue */ #82cfff,
+      /* Light sky blue */ #83bbec /* Very light blue, almost white */
+    );
+    border: 2px solid #82cfff;
+    border-radius: 8px;
+    box-shadow: 0 0px 12px rgba(128, 128, 128, 0.4),
+      /* Medium gray shadow */ 0 0px 20px rgba(169, 169, 169, 0.9),
+      /* Light gray shadow */ 0 0px 28px rgba(230, 223, 223, 0.8),
+      /* Silver gray shadow */ 0 0px 36px rgba(236, 232, 232, 0.7); /* Lighter gray shadow */
+
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    z-index: 1;
+    overflow: hidden;
+  }
+  .gaming-button:hover {
+    background: linear-gradient(
+      90deg,
+      #0a3d62,
+      /* Dark navy blue */ #1e6091,
+      /* Deep cerulean blue */ #82cfff,
+      /* Light sky blue */ #eaf6ff /* Very light blue, almost white */
+    );
+    color: #000;
+    border: 2px solid rgba(10, 40, 80, 0.6);
+    box-shadow: 0 0px 24px rgba(0, 0, 0, 0.9),
+      /* Deep black shadow with high opacity */ 0 0 24px rgba(0, 0, 0, 0.9),
+      /* Very dark blue shadow */ 0 0 32px rgba(0, 0, 0, 0.8),
+      /* Darker blue-gray shadow */ 0 0 36px rgba(0, 0, 0, 0.7); /* Dark black shadow for boldness */
+
+    transform: translateY(-3px); /* Small lift effect */
+  }
+
+  .gaming-button::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.5s ease-in-out;
+    transform: rotate(45deg);
+    z-index: -1;
+  }
+
+  .gaming-button:hover::before {
+    top: -150px;
+    left: -150px;
+    transform: rotate(90deg);
+    background: rgba(255, 255, 255, 0.2);
   }
 
   /* Grand Opening Section */
