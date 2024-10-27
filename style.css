@@ -1316,7 +1316,7 @@ html {
     flex-direction: row; /* Stack menu items vertically */
     justify-content: space-around; /* Spread items */
     gap: 3vw; /* Add more spacing between menu items */
-    padding-left: 0; /* Remove left padding */
+    /* padding-left: 0; Remove left padding */
     align-items: center; /* Center items */
   }
 
