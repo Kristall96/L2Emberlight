@@ -1408,7 +1408,7 @@ html {
       /* Lighter transparent black */ rgba(150, 150, 150, 0.2)
         /* Very light transparent gray */
     );
-    color: #000;
+    color: rgba(255, 255, 255, 0.8);
     border: 2px solid rgba(10, 40, 80, 0.6);
     box-shadow: 0 0px 24px rgba(0, 0, 0, 0.9),
       /* Deep black shadow with high opacity */ 0 0 24px rgba(0, 0, 0, 0.9),
