@@ -1373,30 +1373,49 @@ html {
   }
 
   .gaming-button {
+    font-size: 0.8rem; /* Adjusted button text size */
+    width: auto; /* Let the button size adjust based on content */
+    padding: 8px 35px; /* Add padding for better appearance */
+
     background: linear-gradient(
       90deg,
       rgba(0, 0, 0, 0.5),
-      /* Darker transparent black */ rgba(100, 100, 100, 0.3)
-        /* Lighter gray with more transparency */
+      /* Semi-transparent black */ rgba(255, 255, 255, 0.5)
+        /* Semi-transparent white */
     );
-    border: 2px solid rgba(255, 255, 255, 0.2); /* Lighter transparent border */
-    color: rgba(255, 255, 255, 0.6); /* Slightly transparent white text */
+
+    border: 2px solid rgba(0, 0, 0, 0.5); /* Adjusted border */
+    border-radius: 8px;
+    box-shadow: 0 0px 24px rgba(0, 0, 0, 0.9),
+      /* Deep black shadow with high opacity */ 0 0 24px rgba(0, 0, 0, 0.9),
+      /* Very dark blue shadow */ 0 0 32px rgba(0, 0, 0, 0.8),
+      /* Darker blue-gray shadow */ 0 0 36px rgba(0, 0, 0, 0.7); /* Dark black shadow for boldness */
+
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    z-index: 1;
+    overflow: hidden;
   }
 
   .gaming-button:hover {
+    font-size: 0.8rem; /* Adjusted button text size */
+    width: auto; /* Let the button size adjust based on content */
+    padding: 10px 35px; /* Add padding for better appearance */
+
     background: linear-gradient(
       90deg,
       rgba(0, 0, 0, 0.3),
       /* Lighter transparent black */ rgba(150, 150, 150, 0.2)
         /* Very light transparent gray */
     );
-    color: rgba(
-      255,
-      255,
-      255,
-      0.8
-    ); /* Slightly less transparent white on hover */
-    border: 2px solid rgba(255, 255, 255, 0.4); /* More visible transparent border */
+    color: #000;
+    border: 2px solid rgba(10, 40, 80, 0.6);
+    box-shadow: 0 0px 24px rgba(0, 0, 0, 0.9),
+      /* Deep black shadow with high opacity */ 0 0 24px rgba(0, 0, 0, 0.9),
+      /* Very dark blue shadow */ 0 0 32px rgba(0, 0, 0, 0.8),
+      /* Darker blue-gray shadow */ 0 0 36px rgba(0, 0, 0, 0.7); /* Dark black shadow for boldness */
+
+    transform: translateY(-3px); /* Small lift effect */
   }
 
   /* Grand Opening Section */
