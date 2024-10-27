@@ -256,3 +256,33 @@ updateFooterTextForMobile();
 
 // Listen for window resize to handle dynamic screen size changes
 window.addEventListener("resize", updateFooterTextForMobile);
+function updateGrandOpeningText() {
+  const grandOpeningDate = new Date("Nov 1, 2024 00:00:00").getTime();
+  const now = new Date().getTime();
+  const distance = grandOpeningDate - now;
+
+  // Calculate the days, hours, minutes, and seconds left
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor(
+    (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+  );
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Update the grand opening date text with the remaining time
+  const openingText = document.getElementById("grand-opening-date");
+  if (distance > 0) {
+    openingText.innerHTML = `${days} Days, ${hours} Hours, ${minutes} Minutes, ${seconds} Seconds left`;
+  } else {
+    openingText.innerHTML = "The event has started!";
+  }
+
+  // Update the countdown timer
+  document.getElementById("days").innerHTML = days;
+  document.getElementById("hours").innerHTML = hours;
+  document.getElementById("minutes").innerHTML = minutes;
+  document.getElementById("seconds").innerHTML = seconds;
+}
+
+// Update the countdown and text every second
+setInterval(updateGrandOpeningText, 1000);
