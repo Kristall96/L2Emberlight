@@ -1375,7 +1375,7 @@ html {
   .gaming-button {
     font-size: 0.8rem; /* Adjusted button text size */
     width: auto; /* Let the button size adjust based on content */
-    padding: 10px 35px; /* Add padding for better appearance */
+    padding: 8px 35px; /* Add padding for better appearance */
 
     background: linear-gradient(
       90deg,
