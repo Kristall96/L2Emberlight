@@ -1401,15 +1401,19 @@ html {
     font-size: 0.8rem; /* Adjusted button text size */
     width: auto; /* Let the button size adjust based on content */
     padding: 10px 35px; /* Add padding for better appearance */
-
     background: linear-gradient(
       90deg,
       rgba(0, 0, 0, 0.3),
       /* Lighter transparent black */ rgba(150, 150, 150, 0.2)
         /* Very light transparent gray */
     );
-    color: rgba(255, 255, 255, 0.8);
-    border: 2px solid rgba(10, 40, 80, 0.6);
+    color: rgba(
+      255,
+      255,
+      255,
+      0.8
+    ); /* Slightly less transparent white on hover */
+    border: 2px solid rgba(255, 255, 255, 0.4); /* More visible transparent border */
     box-shadow: 0 0px 24px rgba(0, 0, 0, 0.9),
       /* Deep black shadow with high opacity */ 0 0 24px rgba(0, 0, 0, 0.9),
       /* Very dark blue shadow */ 0 0 32px rgba(0, 0, 0, 0.8),
