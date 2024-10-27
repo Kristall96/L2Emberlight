@@ -1268,6 +1268,14 @@ html {
     max-width: 100%; /* Allow full width on mobile */
   }
 }
+.no-style-link {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit the button's text color */
+}
+
+.no-style-link:hover {
+  text-decoration: none; /* Keep underline removed on hover */
+}
 
 /* Mobile styles for screens smaller than 768px */
 @media (max-width: 768px) {
