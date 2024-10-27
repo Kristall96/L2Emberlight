@@ -11,8 +11,15 @@ body {
   font-weight: normal;
   font-style: normal;
 }
-
+#menu {
+  position: sticky;
+  top: 23.4333px; /* Adjust this value as needed, e.g., `top: 10px;` for some spacing from the top */
+  z-index: 10; /* Ensures it stays above other elements */
+}
 #socialIconsSection {
+  position: sticky;
+  top: 0; /* Adjust this value as needed, e.g., `top: 10px;` for some spacing from the top */
+  z-index: 10; /* Ensures it stays above other elements */
   display: flex;
   justify-content: center;
   background: linear-gradient(
@@ -66,6 +73,22 @@ body {
   padding: 0.5vw 1.5vw;
   position: relative;
   transition: color 0.4s ease, transform 0.3s ease, text-shadow 0.4s ease;
+}
+.menu-list a {
+  text-decoration: none; /* Removes the underline */
+  color: inherit; /* Makes the link color inherit from the parent element */
+  padding: 1vw;
+}
+
+.menu-list a:hover {
+  text-decoration: none; /* Keep underline removed on hover */
+  color: inherit; /* Maintain inherited color on hover */
+}
+/* Add this CSS rule */
+#features-section,
+#events-section,
+#download {
+  scroll-margin-top: 4vw; /* Adjust this value based on your sticky menu height */
 }
 
 .menu-item::before {
@@ -1292,9 +1315,17 @@ html {
   section {
     padding: 2vw 5vw; /* Consistent padding for mobile sections */
   }
+  #menu {
+    position: sticky;
+    top: 23.4333px; /* Adjust this value as needed, e.g., `top: 10px;` for some spacing from the top */
+    z-index: 10; /* Ensures it stays above other elements */
+  }
 
   /* Social Icons Section */
   #socialIconsSection {
+    position: sticky;
+    top: 0; /* Adjust this value as needed, e.g., `top: 10px;` for some spacing from the top */
+    z-index: 10; /* Ensures it stays above other elements */
     padding: 0.5vw 0; /* Add vertical padding */
   }
 
@@ -1384,7 +1415,6 @@ html {
     font-size: 0.8rem; /* Adjusted button text size */
     width: auto; /* Let the button size adjust based on content */
     padding: 8px 35px; /* Add padding for better appearance */
-
     background: linear-gradient(
       90deg,
       rgba(0, 0, 0, 0.5),
@@ -1408,26 +1438,40 @@ html {
   .gaming-button:hover {
     font-size: 0.8rem; /* Adjusted button text size */
     width: auto; /* Let the button size adjust based on content */
-    padding: 10px 35px; /* Add padding for better appearance */
+    padding: 8px 35px; /* Add padding for better appearance */
     background: linear-gradient(
-      90deg,
+      180deg,
       rgba(0, 0, 0, 0.3),
       /* Lighter transparent black */ rgba(150, 150, 150, 0.2)
         /* Very light transparent gray */
     );
-    color: rgba(
-      255,
-      255,
-      255,
-      0.8
-    ); /* Slightly less transparent white on hover */
-    border: 2px solid rgba(255, 255, 255, 0.4); /* More visible transparent border */
+    color: rgb(255, 255, 255); /* Slightly less transparent white on hover */
+    border: 2px solid rgba(0, 0, 0, 0.5); /* Adjusted border */
     box-shadow: 0 0px 24px rgba(0, 0, 0, 0.9),
       /* Deep black shadow with high opacity */ 0 0 24px rgba(0, 0, 0, 0.9),
       /* Very dark blue shadow */ 0 0 32px rgba(0, 0, 0, 0.8),
       /* Darker blue-gray shadow */ 0 0 36px rgba(0, 0, 0, 0.7); /* Dark black shadow for boldness */
 
     transform: translateY(-3px); /* Small lift effect */
+  }
+  .gaming-button::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.5s ease-in-out;
+    transform: rotate(45deg);
+    z-index: -1;
+  }
+
+  .gaming-button:hover::before {
+    top: -80px;
+    left: -80px;
+    transform: rotate(90deg);
+    background: rgba(255, 255, 255, 0.2);
   }
 
   /* Grand Opening Section */
