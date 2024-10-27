@@ -1772,7 +1772,8 @@ html {
   .heading-gradient {
     font-size: 1.2rem;
     text-align: center; /* Centers the text */
-    margin: 0 auto; /* Ensures the element is centered horizontally */
+    padding-bottom: 30vw; /* Ensures the element is centered horizontally */
+    padding-right: 10vw;
   }
 
   .paragraph-text {
