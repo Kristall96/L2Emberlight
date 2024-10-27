@@ -1316,13 +1316,12 @@ html {
     flex-direction: row; /* Stack menu items vertically */
     justify-content: space-around; /* Spread items */
     gap: 3vw; /* Add more spacing between menu items */
-    /* padding-left: 0; Remove left padding */
     align-items: center; /* Center items */
   }
 
   .menu-item {
     font-size: 0.7rem; /* Increase size for readability */
-    padding: 1vw; /* Increase padding for touch-friendliness */
+    padding: 1.6vw; /* Increase padding for touch-friendliness */
     text-align: center; /* Center text */
   }
 
