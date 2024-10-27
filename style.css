@@ -98,7 +98,7 @@ body {
   left: 50%;
   width: 0;
   height: 3px;
-  background-color: #75bfee; /* Bright orange accent */
+  background-color: #a4cceb; /* Bright orange accent */
   transition: width 0.4s ease, left 0.4s ease;
 }
 
@@ -1054,7 +1054,17 @@ html {
 
 .imgGalleryText,
 .videoEventText {
-  color: white;
+  text-align: center;
+  font-size: 2.5rem;
+  padding-bottom: 0.8vw;
+  padding-top: 0.8vw;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  font-family: "lineage2", sans-serif;
+  background: linear-gradient(180deg, #ffffff, #82cfff);
+  background-clip: text;
+  color: transparent;
+  margin: 0;
   text-align: center;
 }
 
@@ -1344,7 +1354,22 @@ html {
   .menu-icons-item i {
     font-size: 1rem; /* Increase icon size slightly for touch */
   }
-
+  .imgGalleryText,
+  .videoEventText {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-bottom: 0.8vw;
+    padding-top: 0.8vw;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    font-family: "lineage2", sans-serif;
+    background: linear-gradient(180deg, #ffffff, #82cfff);
+    background-clip: text;
+    color: transparent;
+    margin: 0;
+    text-align: center;
+  }
   /* Menu Section */
   .menu {
     height: auto; /* Allow flexible height */
@@ -1361,9 +1386,29 @@ html {
   .menu-item {
     font-size: 0.7rem; /* Increase size for readability */
     padding: 1.8vw; /* Increase padding for touch-friendliness */
+
     text-align: center; /* Center text */
   }
-
+  .menu-item:hover {
+    color: #080808; /* Bright white on hover */
+    text-shadow: 0 0px 10px rgba(0, 0, 0, 0.934); /* Subtle glowing text */
+    transform: translateY(-4px); /* Lift the item slightly on hover */
+  }
+  #lightboxImage {
+    margin-top: 50vw;
+    width: 85vw;
+  }
+  .thumbnail-gallery {
+    width: 55vw;
+  }
+  #nextBtn {
+    margin-top: -22vw;
+    margin-right: -9vw;
+  }
+  #prevBtn {
+    margin-top: -22vw;
+    margin-left: -9vw;
+  }
   /* Main Content Section */
   .main-content-div {
     padding: 0;
@@ -1840,6 +1885,21 @@ html {
     bottom: 10px; /* Optionally adjust the position */
     right: 10px; /* Optionally adjust the position */
   }
+  #imageGallery_lightboxImage {
+    padding-top: 50vw;
+    width: 80vw;
+  }
+  #imageGallery_prevBtn {
+    margin-top: -15vw;
+    left: 3vw;
+  }
+  .open-btn {
+    margin-top: -20vw;
+  }
+  #imageGallery_nextBtn {
+    right: 3vw;
+    margin-top: -15vw;
+  }
   .grand-openingText {
     display: flex;
     flex-direction: column;
@@ -1880,5 +1940,136 @@ html {
   }
   .rightSideText {
     display: none;
+  }
+}
+/* Tablet and iPad styles: screen sizes between 768px and 1024px */
+@media only screen and (min-width: 768px) and (max-width: 1080px) {
+  /* Prevent horizontal scrolling */
+  html,
+  body {
+    overflow-x: hidden; /* Disable horizontal scrolling */
+    width: 100vw; /* Ensure the body and html take up the full viewport width */
+  }
+  #socialIconsSection {
+    padding: 0.4vw;
+  }
+  .menu-icons-item i {
+    padding: 0.2vw;
+    font-size: 1rem;
+  }
+  .menu {
+    padding: 1vw;
+  }
+  .heading-gradient {
+    font-size: 1.5rem;
+  }
+  .paragraph-text {
+    font-size: 1rem;
+  }
+  .button-container {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 40%;
+    width: 20%;
+  }
+
+  .gaming-button {
+    width: 100%;
+    font-size: 0.8rem;
+    text-align: center; /* Ensures text is centered */
+    padding: 10px 0; /* Adds vertical padding for a better appearance */
+    display: flex;
+    align-items: center; /* Vertically centers text within the button */
+    justify-content: center; /* Horizontally centers text */
+    color: white;
+    cursor: pointer; /* Makes the button clickable */
+  }
+  #features-content {
+    padding: 3vw;
+    font-size: 1rem;
+  }
+  #feature-left-div h4 {
+    font-size: 1.2rem;
+    padding-bottom: 2vw;
+  }
+  #features-right-div h4 {
+    font-size: 1.2rem;
+    padding-bottom: 2vw;
+  }
+  #forP {
+    display: block; /* Ensure it's not affected by flex layout */
+    text-align: left; /* Align all text inside #forP to the left */
+  }
+
+  #forP p {
+    font-size: 1rem;
+    text-align: left; /* Force text alignment to the left */
+    margin-left: 3vw; /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
+    width: 100%; /* Ensure the p tag takes full width */
+  }
+  .event-box {
+    width: 100%;
+    height: 50%;
+  }
+  .event-box img {
+    width: 20vw;
+    height: 15vw;
+  }
+  .event-box p {
+    font-size: 1rem;
+  }
+  #event-title {
+    font-size: 1.2rem;
+  }
+  .video-box {
+    width: 45vw;
+    height: 25vw;
+    border-radius: 5vw;
+  }
+  .video-box video {
+    border-radius: 2vw;
+  }
+  #openRight {
+    left: -5vw;
+  }
+  #openLeft {
+    right: -5vw;
+  }
+  /* #countdown {
+    display: none;
+  } */
+  #features-section,
+  #events-section,
+  #top-videos {
+    scroll-margin-block-start: 35vw;
+  }
+  .imgGalleryText,
+  .videoEventText {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    padding-bottom: 0.8vw;
+    padding-top: 0.8vw;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    font-family: "lineage2", sans-serif;
+    background: linear-gradient(180deg, #ffffff, #82cfff);
+    background-clip: text;
+    color: transparent;
+    margin: 0;
+    text-align: center;
+  }
+  #imageGallery_lightboxImage {
+    padding-top: 20vw;
+  }
+  #imageGallery_prevBtn {
+    padding-bottom: 35vw;
+    left: 3vw;
+  }
+  #imageGallery_nextBtn {
+    right: 3vw;
+    padding-bottom: 35vw;
   }
 }

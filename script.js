@@ -9,33 +9,6 @@ window.addEventListener("load", function () {
   if (verticalDivider) verticalDivider.classList.add("animate");
 });
 
-// Set the date for grand opening
-const grandOpeningDate = new Date("November 1, 2024 00:00:00").getTime();
-const countdown = setInterval(() => {
-  const now = new Date().getTime();
-  const timeLeft = grandOpeningDate - now;
-
-  const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-  const hours = Math.floor(
-    (timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-  );
-  const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
-  // Display countdown in respective elements
-  document.getElementById("days").innerText = days;
-  document.getElementById("hours").innerText = hours;
-  document.getElementById("minutes").innerText = minutes;
-  document.getElementById("seconds").innerText = seconds;
-
-  // If countdown is over
-  if (timeLeft < 0) {
-    clearInterval(countdown);
-    document.getElementById("grand-opening-div").innerHTML =
-      "<h1>We're live!</h1>";
-  }
-}, 1000);
-
 // Sidebar toggle functionality
 const sideBarLeft = document.getElementById("sideBarLeft");
 const sideBarRight = document.getElementById("sideBarRight");
@@ -246,7 +219,7 @@ function updateFooterTextForMobile() {
   const footerText = document.getElementById("footer-text");
 
   // Check if the screen width is less than or equal to 768px
-  if (window.innerWidth <= 768) {
+  if (window.innerWidth <= 1080) {
     footerText.innerHTML = "&copy; 2024 Emberlight | 2024"; // Modify text for mobile
   }
 }
@@ -256,33 +229,90 @@ updateFooterTextForMobile();
 
 // Listen for window resize to handle dynamic screen size changes
 window.addEventListener("resize", updateFooterTextForMobile);
-function updateGrandOpeningText() {
-  const grandOpeningDate = new Date("Nov 1, 2024 00:00:00").getTime();
-  const now = new Date().getTime();
-  const distance = grandOpeningDate - now;
+let countdownInterval;
 
-  // Calculate the days, hours, minutes, and seconds left
-  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  const hours = Math.floor(
-    (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-  );
-  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+// Function to start the countdown
+function startCountdown() {
+  const grandOpeningDate = new Date("November 1, 2024 00:00:00").getTime();
 
-  // Update the grand opening date text with the remaining time
-  const openingText = document.getElementById("grand-opening-date");
-  if (distance > 0) {
-    openingText.innerHTML = `${days} Days, ${hours} Hours, ${minutes} Minutes, ${seconds} Seconds left`;
-  } else {
-    openingText.innerHTML = "The event has started!";
-  }
+  countdownInterval = setInterval(() => {
+    const now = new Date().getTime();
+    const timeLeft = grandOpeningDate - now;
 
-  // Update the countdown timer
-  document.getElementById("days").innerHTML = days;
-  document.getElementById("hours").innerHTML = hours;
-  document.getElementById("minutes").innerHTML = minutes;
-  document.getElementById("seconds").innerHTML = seconds;
+    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+    const hours = Math.floor(
+      (timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
+    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+    // Update the countdown timer elements
+    document.getElementById("days").innerText = days;
+    document.getElementById("hours").innerText = hours;
+    document.getElementById("minutes").innerText = minutes;
+    document.getElementById("seconds").innerText = seconds;
+
+    // If countdown is over
+    if (timeLeft < 0) {
+      clearInterval(countdownInterval);
+      document.getElementById("grand-opening-div").innerHTML =
+        "<h1>We're live!</h1>";
+    }
+
+    // Update the text for mobile and tablet (<=1080px)
+    handleTextUpdate(days, hours, minutes, seconds);
+  }, 1000);
 }
 
-// Update the countdown and text every second
-setInterval(updateGrandOpeningText, 1000);
+// Function to handle text update for mobile and tablet sizes
+function handleTextUpdate(days, hours, minutes, seconds) {
+  const screenWidth = window.innerWidth;
+  const openingText = document.getElementById("grand-opening-date");
+
+  if (screenWidth <= 800) {
+    if (days >= 0 && hours >= 0 && minutes >= 0 && seconds >= 0) {
+      openingText.innerHTML = `${days} Days, ${hours} Hours, ${minutes} Minutes, ${seconds} Seconds left`;
+    } else {
+      openingText.innerHTML = "The event has started!";
+    }
+  }
+}
+
+// Function to remove the last two videos for tablets
+function removeLastTwoVideos() {
+  if (window.innerWidth >= 768 && window.innerWidth <= 1080) {
+    const videoContainers = document.querySelectorAll(
+      ".video-container, .video-container2"
+    );
+    videoContainers.forEach((container) => {
+      const videos = container.querySelectorAll(".video-box");
+      if (videos.length > 3) {
+        videos[videos.length - 1].style.display = "none"; // Hide the last video
+        videos[videos.length - 2].style.display = "none"; // Hide the second last video
+      }
+    });
+  } else {
+    // Show all videos when the screen is outside the range
+    const videoContainers = document.querySelectorAll(
+      ".video-container, .video-container2"
+    );
+    videoContainers.forEach((container) => {
+      const videos = container.querySelectorAll(".video-box");
+      videos.forEach((video) => {
+        video.style.display = "block"; // Show all videos
+      });
+    });
+  }
+}
+
+// Start the countdown on page load
+window.addEventListener("load", () => {
+  startCountdown(); // Start the countdown
+  removeLastTwoVideos(); // Hide the last two videos on appropriate screen sizes
+});
+
+// Recheck on window resize for both the countdown text and video hiding
+window.addEventListener("resize", () => {
+  removeLastTwoVideos(); // Check video hiding on resize
+  handleTextUpdate(); // Re-check for text update on resize
+});
