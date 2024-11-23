@@ -1,4 +1,3 @@
-// Wait for the page to load fully
 window.addEventListener("load", function () {
   // Get the menu element and vertical divider
   const menu = document.querySelector(".menu");
@@ -316,3 +315,25 @@ window.addEventListener("resize", () => {
   removeLastTwoVideos(); // Check video hiding on resize
   handleTextUpdate(); // Re-check for text update on resize
 });
+
+const audioPlayer = document.getElementById("audio-player");
+
+// Attempt to play audio on page load
+window.addEventListener("load", () => {
+  audioPlayer
+    .play()
+    .then(() => {
+      console.log("Audio autoplayed successfully.");
+    })
+    .catch((error) => {
+      console.log("Autoplay prevented. Waiting for user interaction.");
+    });
+});
+
+// Mute/unmute functionality
+function toggleMute() {
+  audioPlayer.muted = !audioPlayer.muted;
+  document.querySelector("button").innerText = audioPlayer.muted
+    ? "Unmute"
+    : "Mute";
+}
