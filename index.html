@@ -8,9 +8,43 @@
       content="Lineage 2 Emberlight - The Ultimate Interlude x20 PvP Server Experience. Join our custom PvP arena for thrilling battles and balanced gameplay." />
     <meta
       name="keywords"
-      content="Lineage 2, Emberlight, PvP, Mid-rate server, Interlude, x20, Custom server, MMORPG" />
+      content="Lineage 2, Emberlight, PvP, Mid-rate server, Interlude, x20, Custom server, MMORPG, Ember, L2 Ember, L2Emberlight, L2 Emberlight" />
+    <meta name="author" content="Emberlight Team" />
+    <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://www.l2emberlight.com/" />
 
+    <!-- Open Graph (OG) Meta Tags for Social Media -->
+    <meta
+      property="og:title"
+      content="Lineage 2 Emberlight - Interlude x20 PvP Server" />
+    <meta
+      property="og:description"
+      content="Experience thrilling PvP battles on a balanced mid-rate Interlude x20 server. Join Lineage 2 Emberlight today!" />
+    <meta
+      property="og:image"
+      content="https://www.l2emberlight.com/l2images/logo.png" />
+    <meta property="og:url" content="https://www.l2emberlight.com/" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Lineage 2 Emberlight - Interlude x20 PvP Server" />
+    <meta
+      name="twitter:description"
+      content="Join the ultimate PvP adventure on a balanced Interlude x20 server. Join Lineage 2 Emberlight now!" />
+    <meta
+      name="twitter:image"
+      content="https://www.l2emberlight.com/l2images/logo.png" />
+
+    <!-- Preload Important Assets -->
+    <link rel="preload" href="style.css" as="style" />
+    <link rel="preload" href="/l2images/logo.png" as="image" type="image/png" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="/l2images/logo.png" type="image/png" />
     <link
@@ -20,7 +54,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer" />
 
-    <!-- Google tag (gtag.js) -->
+    <!-- Google Tag Manager -->
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-4VFM9ECEBE"></script>
@@ -30,49 +64,91 @@
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-
       gtag("config", "G-4VFM9ECEBE");
     </script>
 
     <title>Lineage 2 Emberlight</title>
   </head>
+
   <body>
     <!-- Menu Section -->
-    <section id="socialIconsSection">
+    <section id="socialIconsSection" aria-label="Social Media Links">
       <div id="socialIcons">
         <ul class="menu-icons-list">
+          <!-- Social Media Icons -->
           <li class="menu-icons-item">
-            <i class="fa-brands fa-square-facebook"></i>
+            <a
+              href="https://www.facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook">
+              <i class="fa-brands fa-square-facebook" aria-hidden="true"></i>
+            </a>
           </li>
           <li class="menu-icons-item">
-            <i class="fa-brands fa-instagram"></i>
+            <a
+              href="https://www.instagram.com/l2_emberlight/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram">
+              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+            </a>
           </li>
-
-          <li class="menu-icons-item"><i class="fa-brands fa-youtube"></i></li>
           <li class="menu-icons-item">
-            <a href="https://discord.gg/DxqU8UgM9S" target="_blank"
-              ><i class="fa-brands fa-discord"></i
-            ></a>
+            <a
+              href="https://www.youtube.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="YouTube">
+              <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li class="menu-icons-item">
+            <a
+              href="https://discord.gg/DxqU8UgM9S"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Discord">
+              <i class="fa-brands fa-discord" aria-hidden="true"></i>
+            </a>
           </li>
         </ul>
       </div>
     </section>
-    <section id="menu" class="menu">
+
+    <!-- Main Navigation Menu -->
+    <section id="menu" class="menu" aria-label="Main Navigation">
       <div id="sidebar" class="sidebar">
         <ul class="menu-list">
-          <li class="menu-item"><a href="#">HOME</a></li>
-          <li class="menu-item"><a href="#features-section">FEATURES</a></li>
-          <li class="menu-item"><a href="#events-section">EVENTS</a></li>
+          <!-- Navigation Links -->
+          <li class="menu-item">
+            <a href="#" aria-label="Navigate to Home">HOME</a>
+          </li>
+          <li class="menu-item">
+            <a
+              href="#features-section"
+              aria-label="Navigate to Features Section"
+              >FEATURES</a
+            >
+          </li>
+          <li class="menu-item">
+            <a href="#events-section" aria-label="Navigate to Events Section"
+              >EVENTS</a
+            >
+          </li>
           <li class="menu-item">
             <a
               href="https://drive.google.com/file/d/1LdZ0g0L18GPDBQiy_KvusrweRFAQZjSq/view"
               target="_blank"
-              >DOWNLOAD</a
-            >
+              rel="noopener noreferrer"
+              aria-label="Download Game Client">
+              DOWNLOAD
+            </a>
           </li>
         </ul>
       </div>
     </section>
+
     <!-- Main Content Section -->
     <section class="main-content">
       <div class="main-content-div">
@@ -127,79 +203,134 @@
     </section>
 
     <!-- Features Section -->
-    <section id="features-section">
+    <section
+      id="features-section"
+      aria-label="Features of Lineage 2 Emberlight">
       <h2>Lineage @ Interlude</h2>
       <div class="feature-container">
+        <!-- Left Image -->
         <div class="feature-img-left feature-box">
           <img
             class="elf"
             src="/l2images/Features/Character_elfs.png"
-            alt="Character Image" />
+            alt="Lineage 2 Character Elf - Server Features"
+            loading="lazy" />
         </div>
+
+        <!-- Features Content -->
         <div id="features-content">
+          <!-- Server Features -->
           <div id="feature-left-div" class="feature-box">
             <h4>Server Features</h4>
             <div id="forP" class="feature-text">
-              <p class="forP"><span class="align-star">*</span> Exp: x20</p>
-              <p class="forP"><span class="align-star">*</span> SP: x20</p>
-              <p class="forP"><span class="align-star">*</span> Adena: x45</p>
-              <p class="forP"><span class="align-star">*</span> Spoil: x5</p>
               <p class="forP">
-                <span class="align-star">*</span> Seal Stone: x20
+                <span class="align-star" aria-hidden="true">*</span> Exp: x20
               </p>
               <p class="forP">
-                <span class="align-star">*</span> Item Drop: x1
+                <span class="align-star" aria-hidden="true">*</span> SP: x20
               </p>
               <p class="forP">
-                <span class="align-star">*</span> Quest Rate: x1
+                <span class="align-star" aria-hidden="true">*</span> Adena: x45
+              </p>
+              <p class="forP">
+                <span class="align-star" aria-hidden="true">*</span> Spoil: x5
+              </p>
+              <p class="forP">
+                <span class="align-star" aria-hidden="true">*</span> Seal Stone:
+                x20
+              </p>
+              <p class="forP">
+                <span class="align-star" aria-hidden="true">*</span> Item Drop:
+                x1
+              </p>
+              <p class="forP">
+                <span class="align-star" aria-hidden="true">*</span> Quest Rate:
+                x1
               </p>
             </div>
           </div>
+
+          <!-- Gameplay Features -->
           <div id="features-right-div" class="feature-box">
             <h4>Gameplay Features</h4>
             <div id="forP" class="feature-text">
-              <p><span class="align-star">*</span> Normal Gatekeeper</p>
-              <p><span class="align-star">*</span> Full Buff 1 Hour</p>
-              <p><span class="align-star">*</span> Daily PvP Events</p>
-              <p><span class="align-star">*</span> Olympiad 2 Weeks</p>
-              <p><span class="align-star">*</span> Crafting System</p>
-              <p><span class="align-star">*</span> Seven Sings System</p>
-              <p><span class="align-star">*</span> Event Manager</p>
+              <p>
+                <span class="align-star" aria-hidden="true">*</span> Normal
+                Gatekeeper
+              </p>
+              <p>
+                <span class="align-star" aria-hidden="true">*</span> Full Buff 1
+                Hour
+              </p>
+              <p>
+                <span class="align-star" aria-hidden="true">*</span> Daily PvP
+                Events
+              </p>
+              <p>
+                <span class="align-star" aria-hidden="true">*</span> Olympiad 2
+                Weeks
+              </p>
+              <p>
+                <span class="align-star" aria-hidden="true">*</span> Crafting
+                System
+              </p>
+              <p>
+                <span class="align-star" aria-hidden="true">*</span> Seven Sings
+                System
+              </p>
+              <p>
+                <span class="align-star" aria-hidden="true">*</span> Event
+                Manager
+              </p>
             </div>
           </div>
         </div>
+
+        <!-- Right Image -->
         <div class="feature-img-right feature-box">
           <img
             class="delf"
             src="/l2images/Features/delf.png"
-            alt="Character Image" />
+            alt="Lineage 2 Character Dark Elf - Gameplay Features"
+            loading="lazy" />
         </div>
       </div>
     </section>
+
     <!-- Event Calendar -->
     <section id="events-section">
       <h2>Event Calendar</h2>
       <div class="events-container">
+        <!-- Event 1 -->
         <div id="eventP" class="event-box">
           <img
             src="/l2images/l2Day/letter-collector.png"
-            alt="Letter Collector Event" />
+            alt="Letter Collector Event - Collect letters from November 1 to November 21, 2024"
+            loading="lazy" />
           <p id="event-title">Letter Collector</p>
           <p>Start Date: 2024-11-01</p>
           <p>End Date: 2024-11-21</p>
           <p>Duration: 20 Days</p>
         </div>
+
+        <!-- Event 2 -->
         <div id="eventP" class="event-box">
           <img
             src="/l2images/Heavy Medal/heavymdedal.png"
-            alt="Heavy Medal Event" />
+            alt="Heavy Medal Event - Earn medals from November 28 to December 18, 2024"
+            loading="lazy" />
           <p id="event-title">Heavy Medal</p>
           <p>Start Date: 2024-11-28</p>
           <p>End Date: 2024-12-18</p>
           <p>Duration: 20 Days</p>
         </div>
+
+        <!-- Event 3 -->
         <div id="eventP" class="event-box">
-          <img src="/l2images/SnowMan/Snowevent.png" alt="Snowman Event" />
+          <img
+            src="/l2images/SnowMan/Snowevent.png"
+            alt="Snowman Event - Build snowmen from December 25, 2024 to January 14, 2025"
+            loading="lazy" />
           <p id="event-title">Snowman</p>
           <p>Start Date: 2024-12-25</p>
           <p>End Date: 2025-01-14</p>
@@ -207,207 +338,304 @@
         </div>
       </div>
     </section>
+
     <!-- Desktop Videos -->
     <section id="top-videos">
       <h2 class="best-videos-title">Best Videos</h2>
+
+      <!-- First Video Container -->
       <div class="video-container">
         <div class="video-box">
           <video
             src="/l2images/videos/baium.mp4"
             controls
-            poster="/l2images/videos/baium.mp4"></video>
+            poster="/l2images/videos/baium.mp4"
+            loading="lazy"
+            aria-label="Baium Video - Watch an epic encounter with Baium"></video>
         </div>
         <div class="video-box">
           <video
             src="/l2images/videos/videoSection.mp4"
             controls
-            poster="/l2images/videoTumb/123428.jpg"></video>
+            poster="/l2images/videoTumb/123428.jpg"
+            loading="lazy"
+            aria-label="Video Section 1 - Exciting gameplay moments"></video>
         </div>
         <div class="video-box">
           <video
             src="/l2images/videos/videoSection.mp4"
             controls
-            poster="/l2images/videoTumb/104514.jpg"></video>
+            poster="/l2images/videoTumb/104514.jpg"
+            loading="lazy"
+            aria-label="Video Section 2 - Battle highlights"></video>
         </div>
         <div class="video-box">
           <video
             src="/l2images/videos/videoSection.mp4"
             controls
-            poster="/l2images/videoTumb/208929.jpg"></video>
+            poster="/l2images/videoTumb/208929.jpg"
+            loading="lazy"
+            aria-label="Video Section 3 - Epic team fights"></video>
         </div>
         <div class="video-box">
           <video
             src="/l2images/videos/videoSection.mp4"
             controls
-            poster="/l2images/videoTumb/90528.jpg"></video>
+            poster="/l2images/videoTumb/90528.jpg"
+            loading="lazy"
+            aria-label="Video Section 4 - PvP arena battles"></video>
         </div>
       </div>
+
+      <!-- Second Video Container -->
       <div class="video-container2">
         <div class="video-box">
           <video
             src="/l2images/videos/videoSection.mp4"
             controls
-            poster="/l2images/videoTumb/208929.jpg"></video>
+            poster="/l2images/videoTumb/208929.jpg"
+            loading="lazy"
+            aria-label="Video Section 5 - Guild wars"></video>
         </div>
         <div class="video-box">
           <video
             src="/l2images/videos/videoSection.mp4"
             controls
-            poster="/l2images/videoTumb/123428.jpg"></video>
+            poster="/l2images/videoTumb/123428.jpg"
+            loading="lazy"
+            aria-label="Video Section 6 - Lineage 2 gameplay"></video>
         </div>
         <div class="video-box">
           <video
             src="/l2images/videos/videoSection.mp4"
             controls
-            poster="/l2images/videoTumb/104514.jpg"></video>
+            poster="/l2images/videoTumb/104514.jpg"
+            loading="lazy"
+            aria-label="Video Section 7 - Boss fights"></video>
         </div>
         <div class="video-box">
           <video
             src="/l2images/videos/videoSection.mp4"
             controls
-            poster="/l2images/videoTumb/208929.jpg"></video>
+            poster="/l2images/videoTumb/208929.jpg"
+            loading="lazy"
+            aria-label="Video Section 8 - Dungeon explorations"></video>
         </div>
         <div class="video-box">
           <video
             src="/l2images/videos/videoSection.mp4"
             controls
-            poster="/l2images/videoTumb/90528.jpg"></video>
+            poster="/l2images/videoTumb/90528.jpg"
+            loading="lazy"
+            aria-label="Video Section 9 - Adventure highlights"></video>
         </div>
       </div>
     </section>
+
     <!-- Images Gallery for Desktop and Mobile -->
     <section id="image-event">
       <h2>Best Images</h2>
       <div id="imageGallery_imagesContainer">
+        <!-- Image Boxes -->
         <div class="image-box">
           <img
             src="/l2images/images/image.png"
-            alt="Image 1"
-            class="imageGallery_galleryImg" />
+            alt="Lineage 2 Gameplay Screenshot 1"
+            class="imageGallery_galleryImg"
+            loading="lazy" />
         </div>
         <div class="image-box">
           <img
             src="/l2images/images/image1.png"
-            alt="Image 2"
-            class="imageGallery_galleryImg" />
+            alt="Lineage 2 Gameplay Screenshot 2"
+            class="imageGallery_galleryImg"
+            loading="lazy" />
         </div>
         <div class="image-box">
           <img
             src="/l2images/images/image2.png"
-            alt="Image 3"
-            class="imageGallery_galleryImg" />
+            alt="Lineage 2 Gameplay Screenshot 3"
+            class="imageGallery_galleryImg"
+            loading="lazy" />
         </div>
         <div class="image-box">
           <img
             src="/l2images/images/image3.png"
-            alt="Image 4"
-            class="imageGallery_galleryImg" />
+            alt="Lineage 2 Gameplay Screenshot 4"
+            class="imageGallery_galleryImg"
+            loading="lazy" />
         </div>
         <div class="image-box">
           <img
             src="/l2images/images/image4.png"
-            alt="Image 5"
-            class="imageGallery_galleryImg" />
+            alt="Lineage 2 Gameplay Screenshot 5"
+            class="imageGallery_galleryImg"
+            loading="lazy" />
         </div>
         <div class="image-box">
           <img
             src="/l2images/videoTumb/Baium.jpg"
-            alt="Image 6"
-            class="imageGallery_galleryImg" />
+            alt="Baium Boss Encounter Screenshot"
+            class="imageGallery_galleryImg"
+            loading="lazy" />
         </div>
         <div class="image-box">
           <img
             src="/l2images/images/PvP.jpg"
-            alt="Image 7"
-            class="imageGallery_galleryImg" />
+            alt="PvP Battle Screenshot"
+            class="imageGallery_galleryImg"
+            loading="lazy" />
         </div>
         <div class="image-box">
           <img
             src="/l2images/images/Shot00017-min.jpg"
-            alt="Image 8"
-            class="imageGallery_galleryImg" />
+            alt="Lineage 2 Gameplay Scene 1"
+            class="imageGallery_galleryImg"
+            loading="lazy" />
         </div>
         <div class="image-box">
           <img
             src="/l2images/images/Shot00021-min.jpg"
-            alt="Image 9"
-            class="imageGallery_galleryImg" />
+            alt="Lineage 2 Gameplay Scene 2"
+            class="imageGallery_galleryImg"
+            loading="lazy" />
         </div>
         <div class="image-box">
           <img
             src="/l2images/images/Shot00034-min.jpg"
-            alt="Image 10"
-            class="imageGallery_galleryImg" />
+            alt="Lineage 2 Gameplay Scene 3"
+            class="imageGallery_galleryImg"
+            loading="lazy" />
         </div>
       </div>
 
       <!-- Modal for displaying larger image -->
-      <div id="imageGallery_lightboxModal" class="modal">
-        <span class="imageGallery_close">&times;</span>
-        <img class="modal-content" id="imageGallery_lightboxImage" />
+      <div
+        id="imageGallery_lightboxModal"
+        class="modal"
+        aria-label="Image Gallery Modal">
+        <span class="imageGallery_close" aria-label="Close Lightbox"
+          >&times;</span
+        >
+        <img
+          class="modal-content"
+          id="imageGallery_lightboxImage"
+          alt="Expanded Gallery Image" />
         <!-- Modal Navigation -->
-        <button id="imageGallery_prevBtn" class="modal-nav-btn">⟨</button>
-        <button id="imageGallery_nextBtn" class="modal-nav-btn">⟩</button>
+        <button
+          id="imageGallery_prevBtn"
+          class="modal-nav-btn"
+          aria-label="Previous Image">
+          ⟨
+        </button>
+        <button
+          id="imageGallery_nextBtn"
+          class="modal-nav-btn"
+          aria-label="Next Image">
+          ⟩
+        </button>
 
         <!-- Thumbnail Gallery (Visible only when the modal is open) -->
-        <div class="imageGallery_thumbnailGallery"></div>
+        <div
+          class="imageGallery_thumbnailGallery"
+          aria-label="Thumbnail Navigation"></div>
       </div>
     </section>
+
     <!-- Sidebar for videos and image galleries -->
     <section id="sideBars">
       <!-- Left Sidebar (Videos) -->
       <div id="sideBarLeft" class="side-bar">
-        <button id="openLeft" class="open-btn left-btn">
-          <i class="fa-solid fa-play"></i>
+        <button
+          id="openLeft"
+          class="open-btn left-btn"
+          aria-label="Open Video Gallery">
+          <i class="fa-solid fa-play" aria-hidden="true"></i>
         </button>
         <div class="video-gallery">
           <h3 class="videoEventText">Best Event Videos</h3>
-          <video controls poster="l2images/videos/baium.mp4">
+          <video
+            controls
+            poster="l2images/videos/baium.mp4"
+            loading="lazy"
+            aria-label="Baium Event Video">
             <source src="l2images/videos/baium.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
       </div>
+
       <!-- Right Sidebar (Image Gallery) -->
       <div id="sideBarRight" class="side-bar">
-        <button id="openRight" class="open-btn right-btn">
-          <i class="fa-solid fa-play"></i>
+        <button
+          id="openRight"
+          class="open-btn right-btn"
+          aria-label="Open Image Gallery">
+          <i class="fa-solid fa-play" aria-hidden="true"></i>
         </button>
         <h3 class="imgGalleryText">Best Image Event Gallery</h3>
         <div class="image-gallery">
-          <img src="l2images/image.png" alt="Image 1" class="gallery-image" />
-          <img src="l2images/image1.png" alt="Image 2" class="gallery-image" />
-          <img src="l2images/image2.png" alt="Image 2" class="gallery-image" />
-          <img src="l2images/image3.png" alt="Image 2" class="gallery-image" />
-          <img src="l2images/image4.png" alt="Image 2" class="gallery-image" />
+          <img
+            src="l2images/images/image.png"
+            alt="Gallery Image 1 - Scenic Lineage 2 Moment"
+            class="gallery-image"
+            loading="lazy" />
+          <img
+            src="l2images/images/image1.png"
+            alt="Gallery Image 2 - Thrilling Lineage 2 Adventure"
+            class="gallery-image"
+            loading="lazy" />
+          <img
+            src="l2images/images/image2.png"
+            alt="Gallery Image 3 - Iconic Lineage 2 Gameplay Scene"
+            class="gallery-image"
+            loading="lazy" />
+          <img
+            src="l2images/images/image3.png"
+            alt="Gallery Image 4 - Group Battle Scene in Lineage 2"
+            class="gallery-image"
+            loading="lazy" />
+          <img
+            src="l2images/images/image4.png"
+            alt="Gallery Image 5 - Character Profile in Lineage 2"
+            class="gallery-image"
+            loading="lazy" />
           <img
             src="l2images/videoTumb/Baium.jpg"
-            alt="Image 1"
-            class="gallery-image" />
+            alt="Gallery Image 6 - Legendary Baium Encounter"
+            class="gallery-image"
+            loading="lazy" />
           <img
             src="l2images/images/PvP.jpg"
-            alt="Image 2"
-            class="gallery-image" />
+            alt="Gallery Image 7 - PvP Battle Arena"
+            class="gallery-image"
+            loading="lazy" />
           <img
             src="l2images/images/Shot00017-min.jpg"
-            alt="Image 2"
-            class="gallery-image" />
+            alt="Gallery Image 8 - Epic Raid Boss Fight"
+            class="gallery-image"
+            loading="lazy" />
           <img
             src="l2images/images/Shot00021-min.jpg"
-            alt="Image 2"
-            class="gallery-image" />
+            alt="Gallery Image 9 - Action-Packed Lineage 2 Scene"
+            class="gallery-image"
+            loading="lazy" />
           <img
             src="l2images/images/Shot00034-min.jpg"
-            alt="Image 2"
-            class="gallery-image" />
-          <!-- Add more images here -->
+            alt="Gallery Image 10 - Intense Gameplay in Lineage 2"
+            class="gallery-image"
+            loading="lazy" />
         </div>
       </div>
     </section>
+
     <!-- Modal for Lightbox Gallery with Thumbnails and Controls -->
     <div id="lightbox" class="lightbox">
       <span class="close">&times;</span>
-      <img class="lightbox-content" id="lightboxImage" />
+      <img
+        class="lightbox-content"
+        id="lightboxImage"
+        alt="Lightbox Display Image" />
       <div class="lightbox-controls">
         <button id="prevBtn">&#10094;</button>
         <button id="nextBtn">&#10095;</button>
@@ -423,40 +651,89 @@
         </button>
       </div>
     </div>
+
     <!-- Optimized Footer Section -->
-    <footer class="footer">
+    <footer class="footer" aria-label="Footer Section">
       <div class="footer-container">
+        <!-- Logo Section -->
         <div class="footer-logo">
           <h3>Emberlight @</h3>
         </div>
+
+        <!-- Navigation Links -->
         <div class="footer-links">
           <ul id="footer-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#features-section">Features</a></li>
-            <li><a href="#events-section">Events</a></li>
-            <li><a href="#top-videos">Videos</a></li>
+            <li><a href="#" aria-label="Navigate to Home">Home</a></li>
+            <li>
+              <a
+                href="#features-section"
+                aria-label="Navigate to Features Section"
+                >Features</a
+              >
+            </li>
+            <li>
+              <a href="#events-section" aria-label="Navigate to Events Section"
+                >Events</a
+              >
+            </li>
+            <li>
+              <a href="#top-videos" aria-label="Navigate to Videos Section"
+                >Videos</a
+              >
+            </li>
           </ul>
         </div>
-        <div class="footer-social">
-          <a href="#"><i class="fa-brands fa-facebook"></i></a>
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#"><i class="fa-brands fa-youtube"></i></a>
-          <a href="https://discord.gg/DxqU8UgM9S" target="_blank"
-            ><i class="fa-brands fa-discord"></i
+
+        <!-- Social Media Links -->
+        <div class="footer-social" aria-label="Social Media Links">
+          <a
+            href="https://www.facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit our Facebook Page">
+            <i class="fa-brands fa-facebook" aria-hidden="true"></i
           ></a>
+          <a
+            href="https://www.instagram.com/l2_emberlight"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit our Instagram Profile">
+            <i class="fa-brands fa-instagram" aria-hidden="true"></i
+          ></a>
+          <a
+            href="https://www.youtube.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit our YouTube Channel">
+            <i class="fa-brands fa-youtube" aria-hidden="true"></i
+          ></a>
+          <a
+            href="https://discord.gg/DxqU8UgM9S"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Join our Discord Server">
+            <i class="fa-brands fa-discord" aria-hidden="true"></i>
+          </a>
         </div>
       </div>
+
+      <!-- Footer Bottom Text -->
       <div class="footer-bottom">
         <p id="footer-text">
           &copy; 2024 Emberlight | Designed by Team Emberlight
         </p>
       </div>
 
-      <!-- External link with an image -->
-      <a id="hopzone" href="https://l2.hopzone.net/site/vote/106355/1">
+      <!-- External Voting Link -->
+      <a
+        id="hopzone"
+        href="https://l2.hopzone.net/site/vote/106355/1"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Vote for Lineage 2 Emberlight on Hopzone">
         <img
           src="https://l2.hopzone.net/assets/img/banners/vote_banners/banner_4.png"
-          alt="Vote for L2EMBERLIGHT.COM"
+          alt="Vote for L2EMBERLIGHT.COM on Hopzone"
           title="L2.HOPZONE.NET – Lineage 2 Servers ranking"
           style="
             border: 0;
@@ -467,6 +744,7 @@
           " />
       </a>
     </footer>
+
     <!-- Include script at the end of the body -->
     <script src="script.js"></script>
     <script type="application/ld+json">
